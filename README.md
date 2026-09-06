@@ -54,3 +54,5 @@ Vercel 환경변수에 Gemini API 키를 넣지 않습니다. 이 앱은 사용�
 ## 문서
 
 제품 요구사항 문서는 `00_Project/MASTER_PRD.md`에서 확인할 수 있습니다.
+
+처음 사용하는 선생님을 위한 공유용 사용 안내서는 `00_Project/USER_GUIDE.md`에서 확인할 수 있습니다.
