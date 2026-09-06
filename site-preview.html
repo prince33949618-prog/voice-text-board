@@ -1,0 +1,176 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>援먯떎 ?뚯꽦쨌臾몄옄 移좏뙋</title>
+    <script type="module">
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))u(i);new MutationObserver(i=>{for(const r of i)if(r.type==="childList")for(const b of r.addedNodes)b.tagName==="LINK"&&b.rel==="modulepreload"&&u(b)}).observe(document,{childList:!0,subtree:!0});function a(i){const r={};return i.integrity&&(r.integrity=i.integrity),i.referrerPolicy&&(r.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?r.credentials="include":i.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function u(i){if(i.ep)return;i.ep=!0;const r=a(i);fetch(i.href,r)}})();const W="voice-text-board-document",_="voice-text-board-settings",dt="voice-text-board-fullscreen",X={dateFormat:"full",autoSave:!0,alwaysOnTop:!1,defaultFontSize:48,defaultColor:"#FFFFFF",lineHeight:1.45,speed:"normal",repeat:1,volume:.9,theme:"dark-green",startFullScreen:!1},q=[{name:"?곗깋",value:"#FFFFFF"},{name:"?몃옉",value:"#F6D95B"},{name:"鍮④컯",value:"#EF5350"},{name:"?뚮옉",value:"#42A5F5"},{name:"珥덈줉",value:"#66BB6A"},{name:"二쇳솴",value:"#FFA726"},{name:"蹂대씪",value:"#AB47BC"},{name:"寃??,value:"#111111"}],ut={"dark-green":"#214F3F","classic-green":"#2D5D46","dark-blue":"#263C52","dark-gray":"#343638"};let o=St(),p="idle",G=0,Y=0,L=0,h=[],d=-1,H=1,y=!1,V=0,f=null,m=null;const Q=document.querySelector("#app");if(!Q)throw new Error("App root not found");Q.innerHTML=`
+  <main class="app-shell" data-mode="idle">
+    <header class="top-toolbar">
+      <div class="brand">
+        <span class="brand-full">援먯떎 ?뚯꽦쨌臾몄옄 移좏뙋</span>
+        <span class="brand-short">?뚯꽦쨌臾몄옄 移좏뙋</span>
+      </div>
+      <nav class="toolbar-actions" aria-label="二쇱슂 湲곕뒫">
+        <button class="tool-button neutral" id="formatToggle" type="button" aria-label="?띿뒪???쒖떇">T</button>
+        <button class="tool-button danger" id="micButton" type="button">?뚯꽦 ?낅젰</button>
+        <button class="tool-button primary" id="readAllButton" type="button">?꾩껜 ?쎄린</button>
+        <button class="tool-button primary" id="readSelectionButton" type="button">?좏깮 ?쎄린</button>
+        <button class="tool-button primary optional-wide" id="readLineButton" type="button">?꾩옱 以??쎄린</button>
+        <button class="tool-button neutral" id="pauseButton" type="button" disabled>?쇱떆?뺤?</button>
+        <button class="tool-button neutral" id="stopButton" type="button" disabled>以묒?</button>
+        <button class="tool-button neutral optional-wide" id="clearButton" type="button">?꾩껜 ??젣</button>
+        <button class="icon-button" id="settingsButton" type="button" aria-label="?ㅼ젙">??/button>
+      </nav>
+    </header>
+
+    <section class="formatting-toolbar" id="formattingToolbar" aria-label="?띿뒪???쒖떇 ?꾧뎄" hidden>
+      <div class="stepper" aria-label="湲???ш린">
+        <button type="button" id="fontMinus" aria-label="湲???묎쾶">??/button>
+        <output id="fontSizeValue">48</output>
+        <button type="button" id="fontPlus" aria-label="湲???ш쾶">+</button>
+      </div>
+      <div class="swatches" aria-label="湲???됱긽">
+        ${q.map(t=>`<button class="swatch" type="button" data-color="${t.value}" title="${t.name}" style="--swatch:${t.value}"></button>`).join("")}
+      </div>
+      <button class="format-button" type="button" data-command="bold" aria-label="援듦쾶"><b>B</b></button>
+      <button class="format-button" type="button" data-command="italic" aria-label="湲곗슱??><i>I</i></button>
+      <button class="format-button" type="button" data-command="underline" aria-label="諛묒쨪"><u>U</u></button>
+      <button class="format-button" type="button" data-command="justifyLeft" aria-label="?쇱そ ?뺣젹">??/button>
+      <button class="format-button" type="button" data-command="justifyCenter" aria-label="媛?대뜲 ?뺣젹">??/button>
+      <button class="format-button" type="button" data-command="justifyRight" aria-label="?ㅻⅨ履??뺣젹">??/button>
+      <div class="stepper" aria-label="以?媛꾧꺽">
+        <button type="button" id="lineHeightMinus" aria-label="以?媛꾧꺽 以꾩씠湲?>??/button>
+        <output id="lineHeightValue">1.45</output>
+        <button type="button" id="lineHeightPlus" aria-label="以?媛꾧꺽 ?섎━湲?>+</button>
+      </div>
+      <button class="format-button" type="button" data-command="undo" aria-label="?ㅽ뻾 痍⑥냼">??/button>
+      <button class="format-button" type="button" data-command="redo" aria-label="?ㅼ떆 ?ㅽ뻾">??/button>
+    </section>
+
+    <section class="board-area">
+      <div class="blackboard-frame">
+        <article class="blackboard" id="blackboard">
+          <div class="date-header" id="dateHeader" aria-label="?ㅻ뒛 ?좎쭨"></div>
+          <div
+            class="text-editor"
+            id="editor"
+            contenteditable="true"
+            role="textbox"
+            aria-multiline="true"
+            spellcheck="false"
+            data-placeholder="?ㅻ낫?쒕줈 ?댁슜???낅젰?섍굅???뚯꽦 ?낅젰 踰꾪듉???뚮윭二쇱꽭??"
+          ></div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="status-bar">
+      <span id="statusText">以鍮?/span>
+      <span id="autoSaveText">?먮룞 ????湲?/span>
+      <span id="countText">湲??0 쨌 以?0</span>
+    </footer>
+
+    <aside class="settings-drawer" id="settingsDrawer" aria-label="?ㅼ젙" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>?ㅼ젙</h2>
+        <button class="icon-button" id="closeSettings" type="button" aria-label="?ㅼ젙 ?リ린">횞</button>
+      </div>
+      <section>
+        <h3>?쇰컲</h3>
+        <label>?좎쭨 ?뺤떇
+          <select id="dateFormatSelect">
+            <option value="full">2026??7??10??湲덉슂??/option>
+            <option value="short">7??10??湲덉슂??/option>
+          </select>
+        </label>
+        <label class="check-row"><input id="autoSaveCheck" type="checkbox" /> ?먮룞 ???/label>
+        <label class="check-row"><input id="alwaysOnTopCheck" type="checkbox" /> ??긽 ??/label>
+      </section>
+      <section>
+        <h3>湲??/h3>
+        <label>湲곕낯 湲???ш린 <input id="defaultFontSizeInput" type="number" min="20" max="120" /></label>
+        <label>湲곕낯 以?媛꾧꺽 <input id="defaultLineHeightInput" type="number" min="1" max="2.2" step="0.05" /></label>
+        <label>湲곕낯 ?됱긽
+          <select id="defaultColorSelect">
+            ${q.map(t=>`<option value="${t.value}">${t.name}</option>`).join("")}
+          </select>
+        </label>
+      </section>
+      <section>
+        <h3>?뚯꽦</h3>
+        <label>?쎄린 ?띾룄
+          <select id="speedSelect">
+            <option value="slow">泥쒖쿇??/option>
+            <option value="normal">蹂댄넻</option>
+            <option value="fast">鍮좊Ⅴ寃?/option>
+          </select>
+        </label>
+        <label>諛섎났 <input id="repeatInput" type="number" min="1" max="5" /></label>
+        <label>?뚮웾 <input id="volumeInput" type="range" min="0" max="100" /></label>
+      </section>
+      <section>
+        <h3>?붾㈃</h3>
+        <label>移좏뙋 ?뚮쭏
+          <select id="themeSelect">
+            <option value="dark-green">Dark Green</option>
+            <option value="classic-green">Classic Green</option>
+            <option value="dark-blue">Dark Blue</option>
+            <option value="dark-gray">Dark Gray</option>
+          </select>
+        </label>
+        <label class="check-row"><input id="startFullScreenCheck" type="checkbox" /> ?꾩껜?붾㈃?쇰줈 ?쒖옉</label>
+      </section>
+      <button class="tool-button primary full-width" id="resetSettingsButton" type="button">?ㅼ젙 珥덇린??/button>
+    </aside>
+
+    <div class="modal-backdrop" id="confirmDialog" hidden>
+      <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+        <h2 id="confirmTitle">?묒꽦???댁슜??紐⑤몢 ??젣?섏떆寃좎뒿?덇퉴?</h2>
+        <p>?곷떒 ?좎쭨????젣?섏? ?딆뒿?덈떎.</p>
+        <div class="dialog-actions">
+          <button class="tool-button neutral" id="cancelClearButton" type="button">痍⑥냼</button>
+          <button class="tool-button danger" id="confirmClearButton" type="button">?꾩껜 ??젣</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="recording-overlay" id="recordingOverlay" hidden>
+      <section class="recording-card">
+        <strong id="recordingTitle">?뱀쓬 以?/strong>
+        <span id="recordingTime">00:00</span>
+        <p id="recordingHelp">留덉씠???낅젰??諛쏄퀬 ?덉뒿?덈떎.</p>
+        <button class="tool-button danger" id="overlayStopRecording" type="button">?뱀쓬 醫낅즺</button>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="speechDialog" hidden>
+      <section class="dialog wide" role="dialog" aria-modal="true" aria-labelledby="speechTitle">
+        <h2 id="speechTitle">?뚯꽦 ?낅젰 寃곌낵</h2>
+        <textarea id="speechResultText" rows="7"></textarea>
+        <p>?꾩옱 而ㅼ꽌 ?꾩튂??異붽??⑸땲??</p>
+        <div class="dialog-actions">
+          <button class="tool-button neutral" id="retryRecordingButton" type="button">?ㅼ떆 ?뱀쓬</button>
+          <button class="tool-button neutral" id="cancelSpeechButton" type="button">痍⑥냼</button>
+          <button class="tool-button primary" id="insertSpeechButton" type="button">蹂몃Ц???ｊ린</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+`;const pt=n(".app-shell"),l=n("#editor"),gt=n("#dateHeader"),bt=n("#statusText"),Z=n("#autoSaveText"),ft=n("#countText"),U=n("#formattingToolbar"),C=n("#settingsDrawer"),E=n("#confirmDialog"),O=n("#recordingOverlay"),mt=n("#recordingTime"),tt=n("#recordingTitle"),et=n("#recordingHelp"),w=n("#speechDialog"),nt=n("#speechResultText"),B=n("#toast");ht();vt();N();I();T();c("idle");window.setInterval(N,6e4);function n(t){const e=document.querySelector(t);if(!e)throw new Error(`Missing element ${t}`);return e}function ht(){const t=ot(W);t!=null&&t.contentHtml&&(l.innerHTML=t.contentHtml),l.style.fontSize=`${o.defaultFontSize}px`,l.style.color=o.defaultColor,l.style.lineHeight=String(o.lineHeight)}function vt(){l.addEventListener("input",()=>{c("editing"),T(),v()}),l.addEventListener("paste",t=>{var a;t.preventDefault();const e=((a=t.clipboardData)==null?void 0:a.getData("text/plain"))??"";document.execCommand("insertText",!1,e)}),n("#formatToggle").addEventListener("click",()=>{U.hidden=!U.hidden,l.focus()}),n("#fontMinus").addEventListener("click",()=>j(-2)),n("#fontPlus").addEventListener("click",()=>j(2)),n("#lineHeightMinus").addEventListener("click",()=>K(-.05)),n("#lineHeightPlus").addEventListener("click",()=>K(.05)),document.querySelectorAll("[data-command]").forEach(t=>{t.addEventListener("click",()=>D(t.dataset.command??""))}),document.querySelectorAll("[data-color]").forEach(t=>{t.addEventListener("click",()=>D("foreColor",t.dataset.color))}),n("#readAllButton").addEventListener("click",()=>z(x())),n("#readSelectionButton").addEventListener("click",wt),n("#readLineButton").addEventListener("click",Tt),n("#pauseButton").addEventListener("click",lt),n("#stopButton").addEventListener("click",()=>F()),n("#clearButton").addEventListener("click",()=>{Dt()&&ct(),E.hidden=!1}),n("#cancelClearButton").addEventListener("click",()=>E.hidden=!0),n("#confirmClearButton").addEventListener("click",Ft),n("#micButton").addEventListener("click",Et),n("#overlayStopRecording").addEventListener("click",P),n("#retryRecordingButton").addEventListener("click",()=>{w.hidden=!0,rt()}),n("#cancelSpeechButton").addEventListener("click",()=>w.hidden=!0),n("#insertSpeechButton").addEventListener("click",xt),n("#settingsButton").addEventListener("click",Bt),n("#closeSettings").addEventListener("click",st),n("#resetSettingsButton").addEventListener("click",()=>{o={...X},R(),I(),at(),s("?ㅼ젙??珥덇린?붾릺?덉뒿?덈떎.")}),k("#dateFormatSelect",t=>o.dateFormat=t),k("#speedSelect",t=>o.speed=t),k("#themeSelect",t=>o.theme=t),k("#defaultColorSelect",t=>o.defaultColor=t),n("#defaultFontSizeInput").addEventListener("change",t=>{o.defaultFontSize=S(Number(t.target.value),20,120),g()}),n("#defaultLineHeightInput").addEventListener("change",t=>{o.lineHeight=S(Number(t.target.value),1,2.2),g()}),n("#repeatInput").addEventListener("change",t=>{o.repeat=S(Number(t.target.value),1,5),g()}),n("#volumeInput").addEventListener("input",t=>{o.volume=Number(t.target.value)/100,g()}),n("#autoSaveCheck").addEventListener("change",t=>{o.autoSave=t.target.checked,g()}),n("#alwaysOnTopCheck").addEventListener("change",t=>{o.alwaysOnTop=t.target.checked,g(),s("??긽 ???ㅼ젙? ?곗뒪?ы넲 ?깆뿉???곸슜?⑸땲??")}),n("#startFullScreenCheck").addEventListener("change",t=>{o.startFullScreen=t.target.checked,g()}),document.addEventListener("keydown",Ht)}function k(t,e){n(t).addEventListener("change",a=>{e(a.target.value),g()})}function g(){R(),I(),s("?ㅼ젙????λ릺?덉뒿?덈떎.")}function St(){return{...X,...ot(_)??{}}}function R(){localStorage.setItem(_,JSON.stringify(o))}function ot(t){try{const e=localStorage.getItem(t);return e?JSON.parse(e):null}catch{return null}}function I(){document.documentElement.style.setProperty("--board-bg",ut[o.theme]),document.documentElement.style.setProperty("--editor-color",o.defaultColor),l.style.lineHeight=String(o.lineHeight),n("#fontSizeValue").value=String(it()),n("#lineHeightValue").value=o.lineHeight.toFixed(2),N()}function at(){n("#dateFormatSelect").value=o.dateFormat,n("#autoSaveCheck").checked=o.autoSave,n("#alwaysOnTopCheck").checked=o.alwaysOnTop,n("#defaultFontSizeInput").value=String(o.defaultFontSize),n("#defaultLineHeightInput").value=String(o.lineHeight),n("#defaultColorSelect").value=o.defaultColor,n("#speedSelect").value=o.speed,n("#repeatInput").value=String(o.repeat),n("#volumeInput").value=String(Math.round(o.volume*100)),n("#themeSelect").value=o.theme,n("#startFullScreenCheck").checked=o.startFullScreen}function N(){const t=new Date,e=["?쇱슂??,"?붿슂??,"?붿슂??,"?섏슂??,"紐⑹슂??,"湲덉슂??,"?좎슂??],a=t.getMonth()+1,u=t.getDate(),i=e[t.getDay()];gt.textContent=o.dateFormat==="full"?`${t.getFullYear()}??${a}??${u}??${i}`:`${a}??${u}??${i}`}function c(t){p=t,pt.dataset.mode=t,bt.textContent=yt(t);const e=t==="reading"||t==="paused";n("#pauseButton").disabled=!e,n("#stopButton").disabled=!e,n("#micButton").textContent=t==="recording"?"?뱀쓬 醫낅즺":"?뚯꽦 ?낅젰",t==="completed"&&window.setTimeout(()=>c("idle"),900)}function yt(t){return{idle:"以鍮?,editing:"?낅젰 以?,recording:"?뱀쓬 以?,converting:"蹂??以?,reading:d>=0?`?쎈뒗 以?쨌 ${d+1} / ${h.length}以?:"?쎈뒗 以?,paused:"?쇱떆?뺤?",saving:"???以?,completed:"?꾨즺",error:"?ㅻ쪟 諛쒖깮"}[t]}function x(){return l.innerText.replace(/\u00a0/g," ").trim()}function T(){const t=x(),e=t?t.split(/\n+/).filter(a=>a.trim()).length:0;ft.textContent=`湲??${t.length} 쨌 以?${e}`}function v(){o.autoSave&&(window.clearTimeout(G),Z.textContent="????湲?,G=window.setTimeout($,700))}function $(){c("saving");const t={version:1,contentHtml:l.innerHTML,plainText:x(),updatedAt:new Date().toISOString()};localStorage.setItem(W,JSON.stringify(t));const e=new Date().toLocaleTimeString("ko-KR",{hour:"2-digit",minute:"2-digit"});Z.textContent=`理쒓렐 ???${e}`,c("completed")}function j(t){const e=S(it()+t,20,120);D("fontSize","7"),document.querySelectorAll("font[size='7']").forEach(a=>{a.removeAttribute("size"),a.style.fontSize=`${e}px`}),l.style.fontSize=`${e}px`,n("#fontSizeValue").value=String(e),v()}function it(){return Number.parseInt(window.getComputedStyle(l).fontSize,10)||o.defaultFontSize}function K(t){o.lineHeight=S(Number((o.lineHeight+t).toFixed(2)),1,2.2),l.style.lineHeight=String(o.lineHeight),n("#lineHeightValue").value=o.lineHeight.toFixed(2),R(),v()}function D(t,e){l.focus(),document.execCommand(t,!1,e),T(),v()}function wt(){var e;const t=((e=window.getSelection())==null?void 0:e.toString().trim())??"";if(!t){s("癒쇱? ?쎌쓣 ?댁슜???쒕옒洹명빐 ?좏깮?댁＜?몄슂.");return}z(t)}function Tt(){const t=kt();if(!t){s("?꾩옱 以꾩뿉 ?쎌쓣 ?댁슜???놁뒿?덈떎.");return}z(t)}function kt(){const t=window.getSelection();if(!t||t.rangeCount===0)return"";const e=x();if(!e)return"";const a=Lt(l,t.getRangeAt(0));let u=0;for(const i of e.split(`
+`)){const r=u+i.length;if(a>=u&&a<=r)return i.trim();u=r+1}return""}function Lt(t,e){const a=e.cloneRange();return a.selectNodeContents(t),a.setEnd(e.endContainer,e.endOffset),a.toString().length}function z(t){const e=t.split(/\n+/).map(a=>a.trim()).filter(Boolean);if(!e.length){s("?쎌쓣 ?댁슜???놁뒿?덈떎.");return}if(!("speechSynthesis"in window)){s("?ъ슜 媛?ν븳 ?뚯꽦??李얠? 紐삵뻽?듬땲?? Windows ?뚯꽦 ?ㅼ젙???뺤씤?댁＜?몄슂.");return}F(),h=e,d=-1,H=1,y=!1,c("reading"),A()}function A(){if(y)return;if(d+=1,d>=h.length){if(H+=1,H>o.repeat){F(!0);return}d=0}Ct(h[d]);const t=new SpeechSynthesisUtterance(h[d]);t.lang="ko-KR",t.rate={slow:.75,normal:1,fast:1.25}[o.speed],t.volume=o.volume,t.onend=()=>window.setTimeout(A,500),t.onerror=()=>{M(),c("error"),s("?쎄린 以??ㅻ쪟媛 諛쒖깮?덉뒿?덈떎.")},window.speechSynthesis.speak(t),c("reading")}function Ct(t){M();const e=document.createTreeWalker(l,NodeFilter.SHOW_TEXT);let a=e.nextNode();for(;a;){const i=(a.textContent??"").indexOf(t);if(i>=0){const r=document.createRange();r.setStart(a,i),r.setEnd(a,i+t.length);const b=document.createElement("mark");b.className="reading-highlight",r.surroundContents(b),b.scrollIntoView({block:"center",behavior:"smooth"});return}a=e.nextNode()}}function M(){l.querySelectorAll("mark.reading-highlight").forEach(t=>{const e=t.parentNode;for(;t.firstChild;)e==null||e.insertBefore(t.firstChild,t);e==null||e.removeChild(t),e==null||e.normalize()})}function lt(){if(p==="paused"){y=!1,window.speechSynthesis.cancel(),d=Math.max(-1,d-1),c("reading"),A();return}p==="reading"&&(y=!0,window.speechSynthesis.cancel(),c("paused"))}function F(t=!1){var e;(e=window.speechSynthesis)==null||e.cancel(),M(),h=[],d=-1,y=!1,c(t?"completed":"idle")}function Et(){if(p==="recording"){P();return}rt()}async function rt(){var t;if(!((t=navigator.mediaDevices)!=null&&t.getUserMedia)){s("???섍꼍?먯꽌??留덉씠?щ? ?ъ슜?????놁뒿?덈떎.");return}try{m=await navigator.mediaDevices.getUserMedia({audio:!0}),f=new MediaRecorder(m),f.start(),L=0,O.hidden=!1,tt.textContent="?뱀쓬 以?,et.textContent="留덉씠???낅젰??諛쏄퀬 ?덉뒿?덈떎.",c("recording"),J(),Y=window.setInterval(J,1e3)}catch{s("留덉씠?щ? ?ъ슜?????놁뒿?덈떎. Windows ?ㅼ젙?먯꽌 沅뚰븳???뺤씤?댁＜?몄슂.")}}function J(){const t=Math.floor(L/60).toString().padStart(2,"0"),e=(L%60).toString().padStart(2,"0");mt.textContent=`${t}:${e}`,L+=1}function P(){window.clearInterval(Y),f==null||f.stop(),m==null||m.getTracks().forEach(t=>t.stop()),f=null,m=null,c("converting"),tt.textContent="蹂??以?,et.textContent="?뚯꽦???띿뒪?몃줈 蹂?섑븯怨??덉뒿?덈떎.",window.setTimeout(()=>{O.hidden=!0,nt.value="",w.hidden=!1,c("completed"),s("?ㅽ봽?쇱씤 STT ?붿쭊 ?곌껐 ?꾧퉴吏 寃곌낵瑜?吏곸젒 ?낅젰???뺤씤?????덉뒿?덈떎.")},700)}function xt(){const t=nt.value.trim();if(!t){s("?ｌ쓣 ?뚯꽦 ?낅젰 寃곌낵媛 ?놁뒿?덈떎.");return}l.focus(),document.execCommand("insertText",!1,t),w.hidden=!0,T(),v()}function Ft(){l.innerHTML="",E.hidden=!0,l.focus(),T(),v(),s("蹂몃Ц????젣?섏뿀?듬땲??")}function Bt(){at(),C.classList.add("open"),C.setAttribute("aria-hidden","false")}function st(){C.classList.remove("open"),C.setAttribute("aria-hidden","true")}function Ht(t){const e=document.activeElement===l||l.contains(document.activeElement);t.ctrlKey&&t.key.toLowerCase()==="s"&&(t.preventDefault(),$(),s("??λ릺?덉뒿?덈떎.")),t.ctrlKey&&t.key.toLowerCase()==="o"&&(t.preventDefault(),s("TXT ?닿린???곗뒪?ы넲 ?뚯씪 ??붿긽???곌껐 ?④퀎?먯꽌 ?쒖꽦?붾맗?덈떎.")),t.key==="Escape"&&(ct(),st(),E.hidden=!0,w.hidden=!0,O.hidden=!0),t.code==="Space"&&!e&&(p==="reading"||p==="paused")&&(t.preventDefault(),lt())}function ct(){(p==="reading"||p==="paused")&&F(),p==="recording"&&P()}function Dt(){return["recording","converting","reading","paused"].includes(p)}function s(t){window.clearTimeout(V),B.textContent=t,B.classList.add("show"),V=window.setTimeout(()=>B.classList.remove("show"),2600)}function S(t,e,a){return Number.isNaN(t)?e:Math.min(a,Math.max(e,t))}window.addEventListener("beforeunload",()=>{o.autoSave&&$(),localStorage.setItem(dt,String(o.startFullScreen))});
+
+</script>
+    <style>
+:root{--panel: #f8f7f2;--background: #d6d1c5;--frame: #7a5738;--primary: #2f6b4f;--primary-dark: #214f3f;--danger: #b8413b;--accent: #f6d95b;--text-dark: #26352e;--text-muted: #5f685f;--board-bg: #214f3f;--editor-color: #ffffff;font-family:Pretendard,Noto Sans KR,Malgun Gothic,sans-serif}*{box-sizing:border-box}body{margin:0;min-width:1100px;min-height:700px;color:var(--text-dark);background:var(--background)}button,input,select,textarea{font:inherit}.app-shell{display:grid;grid-template-rows:72px auto 1fr 40px;min-height:100vh;overflow:hidden}.top-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px;padding:0 20px 0 28px;background:var(--panel);border-bottom:1px solid rgba(0,0,0,.12);box-shadow:0 2px 8px #26352e14}.brand{flex:0 0 auto;font-size:21px;font-weight:700;color:var(--text-dark);white-space:nowrap}.brand-short{display:none}.toolbar-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-width:0}.tool-button,.icon-button,.format-button{min-height:48px;border:0;border-radius:10px;font-weight:700;cursor:pointer;transition:background .15s ease,transform .15s ease,opacity .15s ease}.tool-button{padding:0 16px;color:#fff;background:var(--primary);white-space:nowrap}.tool-button.primary{background:var(--primary)}.tool-button.danger{background:var(--danger)}.tool-button.neutral,.format-button,.icon-button{color:var(--text-dark);background:#e7e2d7}.tool-button:disabled{cursor:not-allowed;opacity:.45}.tool-button:hover:not(:disabled),.icon-button:hover,.format-button:hover{filter:brightness(.96)}.icon-button{display:inline-grid;place-items:center;width:48px;padding:0;font-size:24px}.formatting-toolbar{display:flex;align-items:center;gap:10px;min-height:62px;padding:8px 28px;background:#fffdf7;border-bottom:1px solid rgba(0,0,0,.1)}.format-button{display:inline-grid;place-items:center;width:44px;min-height:44px;font-size:18px}.stepper{display:flex;align-items:center;height:44px;overflow:hidden;border:1px solid rgba(38,53,46,.2);border-radius:8px;background:#fff}.stepper button{width:40px;height:42px;border:0;background:transparent;font-size:22px;cursor:pointer}.stepper output{min-width:54px;text-align:center;font-weight:700}.swatches{display:flex;gap:6px}.swatch{width:34px;height:34px;border:2px solid rgba(38,53,46,.26);border-radius:50%;background:var(--swatch);cursor:pointer}.board-area{min-height:0;padding:28px 34px;background:var(--background)}.blackboard-frame{height:100%;padding:16px;border-radius:8px;background:var(--frame);box-shadow:inset 0 0 0 3px #ffffff1a,0 12px 24px #0000002e}.blackboard{height:100%;min-height:520px;padding:44px 64px;overflow:auto;border-radius:6px;color:var(--editor-color);background:linear-gradient(180deg,color-mix(in srgb,var(--board-bg),#ffffff 5%) 0%,var(--board-bg) 100%)}.date-header{margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.2);color:#f8f3df;font-size:44px;font-weight:800}.text-editor{min-height:calc(100% - 92px);outline:none;color:var(--editor-color);font-size:48px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}.text-editor:empty:before{color:#ffffff94;content:attr(data-placeholder)}.reading-highlight{padding:0 8px;border-radius:6px;color:#1c1c1c;background:var(--accent)}.status-bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:40px;padding:0 22px;color:var(--text-dark);background:var(--panel);border-top:1px solid rgba(0,0,0,.12);font-size:14px;font-weight:700}.status-bar span:nth-child(2){color:var(--text-muted);text-align:center}.status-bar span:last-child{text-align:right}.settings-drawer{position:fixed;inset:0 0 0 auto;z-index:20;width:min(420px,92vw);padding:24px;overflow:auto;background:var(--panel);box-shadow:-16px 0 32px #0000002e;transform:translate(100%);transition:transform .15s ease}.settings-drawer.open{transform:translate(0)}.drawer-header{display:flex;align-items:center;justify-content:space-between}.settings-drawer h2,.settings-drawer h3{margin:0 0 16px}.settings-drawer section{padding:18px 0;border-top:1px solid rgba(38,53,46,.14)}.settings-drawer label{display:grid;gap:8px;margin:12px 0;font-weight:700}.settings-drawer select,.settings-drawer input,.settings-drawer textarea,.dialog textarea{width:100%;min-height:42px;border:1px solid rgba(38,53,46,.22);border-radius:8px;padding:8px 10px;background:#fff}.check-row{display:flex!important;grid-template-columns:auto 1fr;align-items:center;gap:10px!important}.check-row input{width:20px;min-height:20px}.full-width{width:100%}.modal-backdrop,.recording-overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-index:30;display:grid;place-items:center;background:#1418166b}.dialog,.recording-card{width:min(520px,92vw);padding:28px;border-radius:8px;background:var(--panel);box-shadow:0 20px 50px #00000047}.dialog.wide{width:min(680px,92vw)}.dialog h2{margin:0 0 12px}.dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}.recording-card{display:grid;justify-items:center;gap:14px;text-align:center}.recording-card strong{font-size:28px}#recordingTime{font-size:48px;font-weight:800;color:var(--danger)}.toast{position:fixed;z-index:40;left:50%;bottom:56px;max-width:min(620px,90vw);padding:12px 18px;border-radius:8px;color:#fff;background:#26352ef2;opacity:0;pointer-events:none;transform:translate(-50%,12px);transition:opacity .15s ease,transform .15s ease}.toast.show{opacity:1;transform:translate(-50%)}[hidden]{display:none!important}@media (max-width: 1440px){.brand-full{display:none}.brand-short{display:inline}.tool-button{padding:0 12px;font-size:14px}.blackboard{padding:40px 56px}}@media (max-width: 1200px){.optional-wide{display:none}.top-toolbar{padding-inline:16px}.board-area{padding:22px}.blackboard{padding:34px 44px}}
+
+</style>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
+

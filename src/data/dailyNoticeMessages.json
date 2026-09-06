@@ -1,0 +1,2096 @@
+{
+  "version": "v7",
+  "source": "HWP 안전 문구 우선 반영 및 공식 교육 자료 기반 재작성",
+  "total": 261,
+  "repeat_policy": "2026년 1월 1일부터 12월 31일까지의 평일 데이터를 만들고 다른 해에는 같은 월일 기준으로 반복 사용",
+  "daily_messages": {
+    "2026-01-01": {
+      "event": null,
+      "text": "1. 횡단보도 건널 때 주변 살피며 건너기",
+      "display_text": "1. 횡단보도 건널 때 주변 살피며 건너기",
+      "message_1": "횡단보도 건널 때 주변 살피며 건너기",
+      "message_2": "친구의 말을 끝까지 듣고 대답하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-02": {
+      "event": null,
+      "text": "1. 길을 걸을 때 스마트폰 하지 않기",
+      "display_text": "1. 길을 걸을 때 스마트폰 하지 않기",
+      "message_1": "길을 걸을 때 스마트폰 하지 않기",
+      "message_2": "내 생각을 말하기 전에 친구 말을 먼저 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-05": {
+      "event": null,
+      "text": "1. 비가 올 때는 밝은 옷 입기",
+      "display_text": "1. 비가 올 때는 밝은 옷 입기",
+      "message_1": "비가 올 때는 밝은 옷 입기",
+      "message_2": "고마운 일이 있으면 바로 고맙다고 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-06": {
+      "event": null,
+      "text": "1. 낯선 사람에게 개인정보 알려주지 않기",
+      "display_text": "1. 낯선 사람에게 개인정보 알려주지 않기",
+      "message_1": "낯선 사람에게 개인정보 알려주지 않기",
+      "message_2": "미안한 일이 있으면 핑계보다 사과 먼저 하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-07": {
+      "event": null,
+      "text": "1. 낯선 사람이 아는 척해도 따라가지 않기",
+      "display_text": "1. 낯선 사람이 아는 척해도 따라가지 않기",
+      "message_1": "낯선 사람이 아는 척해도 따라가지 않기",
+      "message_2": "친구가 말할 때 끼어들지 않고 기다리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-08": {
+      "event": null,
+      "text": "1. 모르는 어른의 도움 요청 거절하기",
+      "display_text": "1. 모르는 어른의 도움 요청 거절하기",
+      "message_1": "모르는 어른의 도움 요청 거절하기",
+      "message_2": "내 의견은 짧고 분명하게 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-09": {
+      "event": null,
+      "text": "1. 낯선 사람의 스마트폰 연락에 답하지 않기",
+      "display_text": "1. 낯선 사람의 스마트폰 연락에 답하지 않기",
+      "message_1": "낯선 사람의 스마트폰 연락에 답하지 않기",
+      "message_2": "잘 못 들었을 때 다시 말해 달라고 부탁하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-12": {
+      "event": null,
+      "text": "1. 낯선 사람의 차에 함부로 타지 않기",
+      "display_text": "1. 낯선 사람의 차에 함부로 타지 않기",
+      "message_1": "낯선 사람의 차에 함부로 타지 않기",
+      "message_2": "친구의 의견이 달라도 비웃지 않고 듣기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-13": {
+      "event": null,
+      "text": "1. 낯선 사람이 준 간식이나 음식 먹지 않기",
+      "display_text": "1. 낯선 사람이 준 간식이나 음식 먹지 않기",
+      "message_1": "낯선 사람이 준 간식이나 음식 먹지 않기",
+      "message_2": "발표하는 친구를 바라보며 조용히 듣기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-14": {
+      "event": null,
+      "text": "1. 집에 혼자 있을 때 문 열어주지 않기",
+      "display_text": "1. 집에 혼자 있을 때 문 열어주지 않기",
+      "message_1": "집에 혼자 있을 때 문 열어주지 않기",
+      "message_2": "질문할 때는 손을 들고 차례를 기다리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-15": {
+      "event": null,
+      "text": "1. 자동차 밖으로 손과 머리 내밀지 않기",
+      "display_text": "1. 자동차 밖으로 손과 머리 내밀지 않기",
+      "message_1": "자동차 밖으로 손과 머리 내밀지 않기",
+      "message_2": "속상한 마음은 소리치지 않고 말로 표현하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-16": {
+      "event": null,
+      "text": "1. 개인 이동 장비를 탈 때 보호 장비 착용하기",
+      "display_text": "1. 개인 이동 장비를 탈 때 보호 장비 착용하기",
+      "message_1": "개인 이동 장비를 탈 때 보호 장비 착용하기",
+      "message_2": "친구가 싫다고 말하면 그 이유를 듣고 멈추기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-19": {
+      "event": null,
+      "text": "1. 자동차 다니는 곳에서 공놀이하지 않기",
+      "display_text": "1. 자동차 다니는 곳에서 공놀이하지 않기",
+      "message_1": "자동차 다니는 곳에서 공놀이하지 않기",
+      "message_2": "칭찬할 점을 찾으면 친구에게 직접 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-20": {
+      "event": null,
+      "text": "1. 친구의 몸과 마음 아프게 하지 않기",
+      "display_text": "1. 친구의 몸과 마음 아프게 하지 않기",
+      "message_1": "친구의 몸과 마음 아프게 하지 않기",
+      "message_2": "대화가 길어지면 중요한 말을 한 문장으로 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-21": {
+      "event": null,
+      "text": "1. 친구를 함부로 밀기, 꼬집기, 때리지 않기",
+      "display_text": "1. 친구를 함부로 밀기, 꼬집기, 때리지 않기",
+      "message_1": "친구를 함부로 밀기, 꼬집기, 때리지 않기",
+      "message_2": "친구 이름을 바르게 부르며 이야기하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-22": {
+      "event": null,
+      "text": "1. 친구의 몸을 함부로 보거나 만지지 않기",
+      "display_text": "1. 친구의 몸을 함부로 보거나 만지지 않기",
+      "message_1": "친구의 몸을 함부로 보거나 만지지 않기",
+      "message_2": "말하기 어려운 일은 선생님께 도움 요청하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-23": {
+      "event": null,
+      "text": "1. 친구의 몸과 얼굴 사진 찍어 공유하지 않기",
+      "display_text": "1. 친구의 몸과 얼굴 사진 찍어 공유하지 않기",
+      "message_1": "친구의 몸과 얼굴 사진 찍어 공유하지 않기",
+      "message_2": "친구의 설명을 듣고 이해한 내용을 다시 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-26": {
+      "event": null,
+      "text": "1. 친구의 몸과 얼굴 함부로 평가하지 않기",
+      "display_text": "1. 친구의 몸과 얼굴 함부로 평가하지 않기",
+      "message_1": "친구의 몸과 얼굴 함부로 평가하지 않기",
+      "message_2": "농담을 할 때 상대가 웃는지 불편한지 살피기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-27": {
+      "event": null,
+      "text": "1. 친구의 입장에서 생각하며 말과 행동하기",
+      "display_text": "1. 친구의 입장에서 생각하며 말과 행동하기",
+      "message_1": "친구의 입장에서 생각하며 말과 행동하기",
+      "message_2": "부탁할 때는 필요한 이유를 함께 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-28": {
+      "event": null,
+      "text": "1. 욕을 하거나 기분 나쁜 말 사용하지 않기",
+      "display_text": "1. 욕을 하거나 기분 나쁜 말 사용하지 않기",
+      "message_1": "욕을 하거나 기분 나쁜 말 사용하지 않기",
+      "message_2": "거절할 때는 차분한 말로 내 마음 표현하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-29": {
+      "event": null,
+      "text": "1. 욕을 담은 손동작, 기분 나쁜 몸짓하지 않기",
+      "display_text": "1. 욕을 담은 손동작, 기분 나쁜 몸짓하지 않기",
+      "message_1": "욕을 담은 손동작, 기분 나쁜 몸짓하지 않기",
+      "message_2": "친구가 도와주면 결과보다 마음에 감사하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-01-30": {
+      "event": null,
+      "text": "1. 상대를 존중하며 전화, 문자, 톡 하기",
+      "display_text": "1. 상대를 존중하며 전화, 문자, 톡 하기",
+      "message_1": "상대를 존중하며 전화, 문자, 톡 하기",
+      "message_2": "실수한 친구에게 괜찮다고 말해 주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-02": {
+      "event": "세계 습지의 날",
+      "text": "1. 세계 습지의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "display_text": "1. 세계 습지의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_1": "세계 습지의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_2": "새로운 친구에게 먼저 인사하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-03": {
+      "event": null,
+      "text": "1. 친구의 가족에 대하여 함부로 말하지 않기",
+      "display_text": "1. 친구의 가족에 대하여 함부로 말하지 않기",
+      "message_1": "친구의 가족에 대하여 함부로 말하지 않기",
+      "message_2": "친구 말을 들은 뒤 내 생각 한 가지 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-04": {
+      "event": null,
+      "text": "1. 친구가 싫어하는 행동 하지 않기",
+      "display_text": "1. 친구가 싫어하는 행동 하지 않기",
+      "message_1": "친구가 싫어하는 행동 하지 않기",
+      "message_2": "모둠 대화에서는 모두 한 번씩 말할 기회 갖기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-05": {
+      "event": null,
+      "text": "1. 친구에게 돈을 빌려주거나 빌리지 않기",
+      "display_text": "1. 친구에게 돈을 빌려주거나 빌리지 않기",
+      "message_1": "친구에게 돈을 빌려주거나 빌리지 않기",
+      "message_2": "함께 쓰는 물건은 차례를 정해 사용하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-06": {
+      "event": null,
+      "text": "1. 친구에게 간식이나 물건 사달라고 하지 않기",
+      "display_text": "1. 친구에게 간식이나 물건 사달라고 하지 않기",
+      "message_1": "친구에게 간식이나 물건 사달라고 하지 않기",
+      "message_2": "모둠 활동에서 맡은 일을 끝까지 해보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-09": {
+      "event": null,
+      "text": "1. 장난으로 다른 사람의 물건 숨기지 않기",
+      "display_text": "1. 장난으로 다른 사람의 물건 숨기지 않기",
+      "message_1": "장난으로 다른 사람의 물건 숨기지 않기",
+      "message_2": "친구가 어려워하면 먼저 무엇이 필요한지 물어보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-10": {
+      "event": null,
+      "text": "1. 친구 물건 허락 없이 손대거나 가져가지 않기",
+      "display_text": "1. 친구 물건 허락 없이 손대거나 가져가지 않기",
+      "message_1": "친구 물건 허락 없이 손대거나 가져가지 않기",
+      "message_2": "친구의 속도에 맞춰 기다려 주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-11": {
+      "event": "세계 여성과학자의 날",
+      "text": "1. 세계 여성과학자의 날 : 궁금한 점을 질문하고 근거를 찾아보기",
+      "display_text": "1. 세계 여성과학자의 날 : 궁금한 점을 질문하고 근거를 찾아보기",
+      "message_1": "세계 여성과학자의 날 : 궁금한 점을 질문하고 근거를 찾아보기",
+      "message_2": "함께 정한 규칙은 내가 먼저 지키기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-12": {
+      "event": null,
+      "text": "1. 교실 안에서 뛰거나 장난치지 않기",
+      "display_text": "1. 교실 안에서 뛰거나 장난치지 않기",
+      "message_1": "교실 안에서 뛰거나 장난치지 않기",
+      "message_2": "도움을 받았으면 다음에는 내가 도와보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-13": {
+      "event": null,
+      "text": "1. 교실에서 몸 장난이나 악 지르지 않기",
+      "display_text": "1. 교실에서 몸 장난이나 악 지르지 않기",
+      "message_1": "교실에서 몸 장난이나 악 지르지 않기",
+      "message_2": "친구가 준비물을 찾을 때 아는 곳을 알려주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-16": {
+      "event": null,
+      "text": "1. 교실 바닥에 앉거나 누워서 장난치지 않기",
+      "display_text": "1. 교실 바닥에 앉거나 누워서 장난치지 않기",
+      "message_1": "교실 바닥에 앉거나 누워서 장난치지 않기",
+      "message_2": "같은 자료를 볼 때 서로 잘 보이게 자리 조정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-17": {
+      "event": null,
+      "text": "1. 계단, 복도에서 뛰거나 장난치지 않기",
+      "display_text": "1. 계단, 복도에서 뛰거나 장난치지 않기",
+      "message_1": "계단, 복도에서 뛰거나 장난치지 않기",
+      "message_2": "모둠 결과물에는 친구의 생각도 함께 담기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-18": {
+      "event": null,
+      "text": "1. 계단, 복도에서 우측 통행하기",
+      "display_text": "1. 계단, 복도에서 우측 통행하기",
+      "message_1": "계단, 복도에서 우측 통행하기",
+      "message_2": "역할을 정할 때 하고 싶은 일을 서로 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-19": {
+      "event": null,
+      "text": "1. 보이지 않는 모퉁이에서 조심해서 걷기",
+      "display_text": "1. 보이지 않는 모퉁이에서 조심해서 걷기",
+      "message_1": "보이지 않는 모퉁이에서 조심해서 걷기",
+      "message_2": "역할이 마음에 들지 않아도 먼저 해보고 조정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-20": {
+      "event": null,
+      "text": "1. 계단 난간에서 장난치지 않기",
+      "display_text": "1. 계단 난간에서 장난치지 않기",
+      "message_1": "계단 난간에서 장난치지 않기",
+      "message_2": "친구가 실수해도 탓하기 전에 해결 방법 찾기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-23": {
+      "event": null,
+      "text": "1. 복도나 창문 난간에 기대지 않기",
+      "display_text": "1. 복도나 창문 난간에 기대지 않기",
+      "message_1": "복도나 창문 난간에 기대지 않기",
+      "message_2": "함께 만든 물건은 함께 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-24": {
+      "event": null,
+      "text": "1. 책상과 사물함 위에 올라가지 않기",
+      "display_text": "1. 책상과 사물함 위에 올라가지 않기",
+      "message_1": "책상과 사물함 위에 올라가지 않기",
+      "message_2": "놀이에 들어오고 싶은 친구가 있으면 방법 함께 정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-25": {
+      "event": null,
+      "text": "1. 출입문이나 문 근처에서 장난치지 않기",
+      "display_text": "1. 출입문이나 문 근처에서 장난치지 않기",
+      "message_1": "출입문이나 문 근처에서 장난치지 않기",
+      "message_2": "혼자 있는 친구에게 함께할지 물어보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-26": {
+      "event": null,
+      "text": "1. 줄 설 때 친구 밀지 않고 질서 지키기",
+      "display_text": "1. 줄 설 때 친구 밀지 않고 질서 지키기",
+      "message_1": "줄 설 때 친구 밀지 않고 질서 지키기",
+      "message_2": "교실 물건은 내 것처럼 조심해서 사용하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-02-27": {
+      "event": null,
+      "text": "1. 줄 서서 이동할 때 갑자기 멈추지 않기",
+      "display_text": "1. 줄 서서 이동할 때 갑자기 멈추지 않기",
+      "message_1": "줄 서서 이동할 때 갑자기 멈추지 않기",
+      "message_2": "공용 물건은 사용한 뒤 다음 친구를 위해 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-02": {
+      "event": null,
+      "text": "1. 학교 엘리베이터 함부로 사용하지 않기",
+      "display_text": "1. 학교 엘리베이터 함부로 사용하지 않기",
+      "message_1": "학교 엘리베이터 함부로 사용하지 않기",
+      "message_2": "모둠 책상은 모두가 쓸 수 있게 넓게 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-03": {
+      "event": "세계 야생동식물의 날",
+      "text": "1. 세계 야생동식물의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "display_text": "1. 세계 야생동식물의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_1": "세계 야생동식물의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_2": "친구가 말한 좋은 생각을 모둠 활동에 반영하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-04": {
+      "event": null,
+      "text": "1. 점심 자유시간 규칙과 질서 지키며 놀기",
+      "display_text": "1. 점심 자유시간 규칙과 질서 지키며 놀기",
+      "message_1": "점심 자유시간 규칙과 질서 지키며 놀기",
+      "message_2": "친구와 의견이 다르면 한 가지씩 이유 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-05": {
+      "event": null,
+      "text": "1. 화장실에서 화장지, 물, 문 장난하지 않기",
+      "display_text": "1. 화장실에서 화장지, 물, 문 장난하지 않기",
+      "message_1": "화장실에서 화장지, 물, 문 장난하지 않기",
+      "message_2": "정리 시간에는 내가 쓴 자리부터 치우기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-06": {
+      "event": null,
+      "text": "1. 실내화를 신고 등교 및 하교하지 않기",
+      "display_text": "1. 실내화를 신고 등교 및 하교하지 않기",
+      "message_1": "실내화를 신고 등교 및 하교하지 않기",
+      "message_2": "줄을 설 때 앞뒤 친구와 간격 지키기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-09": {
+      "event": null,
+      "text": "1. 미세먼지 나쁨일 경우 마스크 착용하기",
+      "display_text": "1. 미세먼지 나쁨일 경우 마스크 착용하기",
+      "message_1": "미세먼지 나쁨일 경우 마스크 착용하기",
+      "message_2": "함께하는 활동에서는 이기는 것보다 규칙 지키기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-10": {
+      "event": null,
+      "text": "1. 시소나 그네를 위험하게 타지 않기",
+      "display_text": "1. 시소나 그네를 위험하게 타지 않기",
+      "message_1": "시소나 그네를 위험하게 타지 않기",
+      "message_2": "친구가 부탁을 거절해도 서운한 말 하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-11": {
+      "event": null,
+      "text": "1. 놀이 기구의 올바른 이용 방법에 맞게 안전하게 이용하기",
+      "display_text": "1. 놀이 기구의 올바른 이용 방법에 맞게 안전하게 이용하기",
+      "message_1": "놀이 기구의 올바른 이용 방법에 맞게 안전하게 이용하기",
+      "message_2": "서로의 차례가 보이도록 약속을 글로 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-12": {
+      "event": null,
+      "text": "1. 운동장에서 모래를 뿌리거나 돌 던지지 않기",
+      "display_text": "1. 운동장에서 모래를 뿌리거나 돌 던지지 않기",
+      "message_1": "운동장에서 모래를 뿌리거나 돌 던지지 않기",
+      "message_2": "화가 날 때 바로 말하기보다 세 번 숨 고르기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-13": {
+      "event": null,
+      "text": "1. 비 오는 날 미끄러운 빗길, 물웅덩이 조심하기",
+      "display_text": "1. 비 오는 날 미끄러운 빗길, 물웅덩이 조심하기",
+      "message_1": "비 오는 날 미끄러운 빗길, 물웅덩이 조심하기",
+      "message_2": "속상한 일이 있으면 상황과 마음을 나누어 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-16": {
+      "event": null,
+      "text": "1. 비 오는 날 미끄러지지 않도록 조심해서 걷기",
+      "display_text": "1. 비 오는 날 미끄러지지 않도록 조심해서 걷기",
+      "message_1": "비 오는 날 미끄러지지 않도록 조심해서 걷기",
+      "message_2": "실패했을 때 다시 해볼 방법 한 가지 찾기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-17": {
+      "event": null,
+      "text": "1. 불을 이용한 장난 절대 하지 않기",
+      "display_text": "1. 불을 이용한 장난 절대 하지 않기",
+      "message_1": "불을 이용한 장난 절대 하지 않기",
+      "message_2": "친구 말에 기분이 상하면 차분히 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-18": {
+      "event": null,
+      "text": "1. 외출할 때 부모님 허락받고, 늦게 다니지 않기",
+      "display_text": "1. 외출할 때 부모님 허락받고, 늦게 다니지 않기",
+      "message_1": "외출할 때 부모님 허락받고, 늦게 다니지 않기",
+      "message_2": "마음이 급할 때 하던 일을 잠시 멈추고 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-19": {
+      "event": null,
+      "text": "1. 사람이 없거나 위험한 곳에서 놀지 않기",
+      "display_text": "1. 사람이 없거나 위험한 곳에서 놀지 않기",
+      "message_1": "사람이 없거나 위험한 곳에서 놀지 않기",
+      "message_2": "울고 싶을 때 안전한 곳에서 도움 요청하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-20": {
+      "event": "국제 행복의 날",
+      "text": "1. 국제 행복의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 국제 행복의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "국제 행복의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "짜증이 날 때 손과 발로 표현하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-23": {
+      "event": null,
+      "text": "1. 가위나 칼을 휘두르거나 장난치지 않기",
+      "display_text": "1. 가위나 칼을 휘두르거나 장난치지 않기",
+      "message_1": "가위나 칼을 휘두르거나 장난치지 않기",
+      "message_2": "기분이 좋을 때도 친구를 놀라게 하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-24": {
+      "event": null,
+      "text": "1. 자, 각도기 등 딱딱한 물건 휘두르지 않기",
+      "display_text": "1. 자, 각도기 등 딱딱한 물건 휘두르지 않기",
+      "message_1": "자, 각도기 등 딱딱한 물건 휘두르지 않기",
+      "message_2": "실수했을 때 나를 탓하기보다 고칠 점 찾기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-25": {
+      "event": null,
+      "text": "1. 장난삼아 물건을 던지거나 발로 차지 않기",
+      "display_text": "1. 장난삼아 물건을 던지거나 발로 차지 않기",
+      "message_1": "장난삼아 물건을 던지거나 발로 차지 않기",
+      "message_2": "걱정되는 일이 있으면 혼자 오래 참지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-26": {
+      "event": null,
+      "text": "1. 종이에 베이지 않도록 조심하기",
+      "display_text": "1. 종이에 베이지 않도록 조심하기",
+      "message_1": "종이에 베이지 않도록 조심하기",
+      "message_2": "친구가 화난 모습을 보이면 거리를 두고 기다리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-27": {
+      "event": null,
+      "text": "1. 연필로 장난하지 않고 조심해서 다루기",
+      "display_text": "1. 연필로 장난하지 않고 조심해서 다루기",
+      "message_1": "연필로 장난하지 않고 조심해서 다루기",
+      "message_2": "말다툼이 생기면 목소리를 낮추고 다시 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-30": {
+      "event": "세계 쓰레기 없는 날",
+      "text": "1. 세계 쓰레기 없는 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 세계 쓰레기 없는 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "세계 쓰레기 없는 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "내 마음을 색깔이나 날씨처럼 표현해 보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-03-31": {
+      "event": null,
+      "text": "1. 장난감 총이나 칼로 위험한 장난하지 않기",
+      "display_text": "1. 장난감 총이나 칼로 위험한 장난하지 않기",
+      "message_1": "장난감 총이나 칼로 위험한 장난하지 않기",
+      "message_2": "수업이 어려우면 모르는 부분을 표시하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-01": {
+      "event": null,
+      "text": "1. 우산을 휘두르며 장난치지 않기",
+      "display_text": "1. 우산을 휘두르며 장난치지 않기",
+      "message_1": "우산을 휘두르며 장난치지 않기",
+      "message_2": "긴장될 때 천천히 숨 쉬고 시작하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-02": {
+      "event": "세계 자폐증 인식의 날",
+      "text": "1. 세계 자폐증 인식의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 세계 자폐증 인식의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "세계 자폐증 인식의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "친구의 표정을 보고 말을 멈출지 이어갈지 살피기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-03": {
+      "event": null,
+      "text": "1. 음식을 먹고 난 후 양치 3분 이상 하기",
+      "display_text": "1. 음식을 먹고 난 후 양치 3분 이상 하기",
+      "message_1": "음식을 먹고 난 후 양치 3분 이상 하기",
+      "message_2": "억울한 일이 있으면 사실을 순서대로 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-06": {
+      "event": "발전과 평화를 위한 국제 스포츠의 날",
+      "text": "1. 발전과 평화를 위한 국제 스포츠의 날 : 평화를 위해 노력한 사람들을 기억하기",
+      "display_text": "1. 발전과 평화를 위한 국제 스포츠의 날 : 평화를 위해 노력한 사람들을 기억하기",
+      "message_1": "발전과 평화를 위한 국제 스포츠의 날 : 평화를 위해 노력한 사람들을 기억하기",
+      "message_2": "즐거운 마음은 안전한 행동으로 표현하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-07": {
+      "event": "세계 보건의 날",
+      "text": "1. 세계 보건의 날 : 건강을 지키는 생활 습관 한 가지 실천하기",
+      "display_text": "1. 세계 보건의 날 : 건강을 지키는 생활 습관 한 가지 실천하기",
+      "message_1": "세계 보건의 날 : 건강을 지키는 생활 습관 한 가지 실천하기",
+      "message_2": "분한 마음이 들면 손을 멈추고 도움 요청하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-08": {
+      "event": null,
+      "text": "1. 재채기할 때 옷소매로 입 가리기",
+      "display_text": "1. 재채기할 때 옷소매로 입 가리기",
+      "message_1": "재채기할 때 옷소매로 입 가리기",
+      "message_2": "마음이 흔들릴 때 물 한 모금 마시고 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-09": {
+      "event": null,
+      "text": "1. 추운 날씨 옷 따뜻하게 입고 다니기",
+      "display_text": "1. 추운 날씨 옷 따뜻하게 입고 다니기",
+      "message_1": "추운 날씨 옷 따뜻하게 입고 다니기",
+      "message_2": "내가 할 수 있는 일과 도움 받을 일을 구분하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-10": {
+      "event": null,
+      "text": "1. 하루에 8번 이상 30초씩 손 자주 씻기",
+      "display_text": "1. 하루에 8번 이상 30초씩 손 자주 씻기",
+      "message_1": "하루에 8번 이상 30초씩 손 자주 씻기",
+      "message_2": "오늘 기분을 짧게 적고 하루를 시작하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-13": {
+      "event": null,
+      "text": "1. 손톱과 발톱 깔끔하게 자르기",
+      "display_text": "1. 손톱과 발톱 깔끔하게 자르기",
+      "message_1": "손톱과 발톱 깔끔하게 자르기",
+      "message_2": "친구의 감정을 내가 마음대로 정하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-14": {
+      "event": null,
+      "text": "1. 정해진 시간에 정확한 양만큼 약 먹기",
+      "display_text": "1. 정해진 시간에 정확한 양만큼 약 먹기",
+      "message_1": "정해진 시간에 정확한 양만큼 약 먹기",
+      "message_2": "다툼 뒤에는 필요한 시간을 갖고 다시 이야기하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-15": {
+      "event": null,
+      "text": "1. 카페인이 많은 음료 마시지 않기",
+      "display_text": "1. 카페인이 많은 음료 마시지 않기",
+      "message_1": "카페인이 많은 음료 마시지 않기",
+      "message_2": "사과를 들은 뒤에도 불편하면 선생님께 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-16": {
+      "event": null,
+      "text": "1. 호기심에라도 술과 담배 하지 않기",
+      "display_text": "1. 호기심에라도 술과 담배 하지 않기",
+      "message_1": "호기심에라도 술과 담배 하지 않기",
+      "message_2": "수업 전에 책과 필통을 미리 꺼내기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-17": {
+      "event": null,
+      "text": "1. 뜨거운 것에 데였을 때 흐르는 찬물로 식히고 알리기",
+      "display_text": "1. 뜨거운 것에 데였을 때 흐르는 찬물로 식히고 알리기",
+      "message_1": "뜨거운 것에 데였을 때 흐르는 찬물로 식히고 알리기",
+      "message_2": "모르는 문제는 표시한 뒤 질문하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-20": {
+      "event": "장애인의 날",
+      "text": "1. 장애인의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "display_text": "1. 장애인의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_1": "장애인의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_2": "과제는 할 수 있는 부분부터 시작하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-21": {
+      "event": "세계 창의성과 혁신의 날",
+      "text": "1. 세계 창의성과 혁신의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 세계 창의성과 혁신의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "세계 창의성과 혁신의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "설명을 들을 때 눈은 말하는 사람에게 두기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-22": {
+      "event": "어머니 지구의 날",
+      "text": "1. 어머니 지구의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "display_text": "1. 어머니 지구의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_1": "어머니 지구의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_2": "중요한 말은 짧게 적어 두기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-23": {
+      "event": "세계 책과 저작권의 날",
+      "text": "1. 세계 책과 저작권의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "display_text": "1. 세계 책과 저작권의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "message_1": "세계 책과 저작권의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "message_2": "틀린 문제는 답만 보지 말고 이유 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-24": {
+      "event": null,
+      "text": "1. 태풍으로 강한 비바람이 불 때 밖에 나가지 않기",
+      "display_text": "1. 태풍으로 강한 비바람이 불 때 밖에 나가지 않기",
+      "message_1": "태풍으로 강한 비바람이 불 때 밖에 나가지 않기",
+      "message_2": "친구가 발표할 때 내 생각과 비교해 듣기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-27": {
+      "event": null,
+      "text": "1. 지진이 났을 때 책상이나 테이블 밑에 숨기",
+      "display_text": "1. 지진이 났을 때 책상이나 테이블 밑에 숨기",
+      "message_1": "지진이 났을 때 책상이나 테이블 밑에 숨기",
+      "message_2": "새로 배운 말은 예문으로 한 번 써보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-28": {
+      "event": "세계 산업안전보건의 날",
+      "text": "1. 세계 산업안전보건의 날 : 안전 수칙을 다시 확인하고 침착하게 실천하기",
+      "display_text": "1. 세계 산업안전보건의 날 : 안전 수칙을 다시 확인하고 침착하게 실천하기",
+      "message_1": "세계 산업안전보건의 날 : 안전 수칙을 다시 확인하고 침착하게 실천하기",
+      "message_2": "읽은 내용은 한 문장으로 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-29": {
+      "event": null,
+      "text": "1. 화재 경보가 울리면 불이 난 건물 빠져나가기",
+      "display_text": "1. 화재 경보가 울리면 불이 난 건물 빠져나가기",
+      "message_1": "화재 경보가 울리면 불이 난 건물 빠져나가기",
+      "message_2": "공부하다 막히면 도움 받을 사람을 떠올리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-04-30": {
+      "event": "국제 재즈의 날",
+      "text": "1. 국제 재즈의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 국제 재즈의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "국제 재즈의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "활동이 끝나면 배운 점 한 가지 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-01": {
+      "event": null,
+      "text": "1. 친구의 실수 비난하지 않고 격려해주기",
+      "display_text": "1. 친구의 실수 비난하지 않고 격려해주기",
+      "message_1": "친구의 실수 비난하지 않고 격려해주기",
+      "message_2": "숙제는 날짜와 내용을 확인하고 챙기기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-04": {
+      "event": null,
+      "text": "1. 자신의 잘못을 인정하고 사과하기",
+      "display_text": "1. 자신의 잘못을 인정하고 사과하기",
+      "message_1": "자신의 잘못을 인정하고 사과하기",
+      "message_2": "학습지는 이름과 날짜를 먼저 쓰기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-05": {
+      "event": "어린이날",
+      "text": "1. 어린이날 : 나와 친구의 권리를 함께 존중하기",
+      "display_text": "1. 어린이날 : 나와 친구의 권리를 함께 존중하기",
+      "message_1": "어린이날 : 나와 친구의 권리를 함께 존중하기",
+      "message_2": "문제를 풀기 전 무엇을 묻는지 밑줄 긋기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-06": {
+      "event": null,
+      "text": "1. 잘 모르는 친구에게 친절하게 알려주기",
+      "display_text": "1. 잘 모르는 친구에게 친절하게 알려주기",
+      "message_1": "잘 모르는 친구에게 친절하게 알려주기",
+      "message_2": "정답을 맞혀도 풀이 과정을 한 번 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-07": {
+      "event": null,
+      "text": "1. 선생님에게 항상 솔직하게 말씀드리기",
+      "display_text": "1. 선생님에게 항상 솔직하게 말씀드리기",
+      "message_1": "선생님에게 항상 솔직하게 말씀드리기",
+      "message_2": "친구의 좋은 공부 방법을 하나 배워보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-08": {
+      "event": "어버이날",
+      "text": "1. 어버이날 : 고마운 마음을 말과 행동으로 표현하기",
+      "display_text": "1. 어버이날 : 고마운 마음을 말과 행동으로 표현하기",
+      "message_1": "어버이날 : 고마운 마음을 말과 행동으로 표현하기",
+      "message_2": "수업 중 필요한 말은 손을 들고 하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-11": {
+      "event": null,
+      "text": "1. 선생님과 마주치면 예의를 지켜 인사하기",
+      "display_text": "1. 선생님과 마주치면 예의를 지켜 인사하기",
+      "message_1": "선생님과 마주치면 예의를 지켜 인사하기",
+      "message_2": "활동 자료는 잃어버리지 않게 한곳에 모으기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-12": {
+      "event": null,
+      "text": "1. 평소 고민거리가 있으면 선생님께 말씀드리기",
+      "display_text": "1. 평소 고민거리가 있으면 선생님께 말씀드리기",
+      "message_1": "평소 고민거리가 있으면 선생님께 말씀드리기",
+      "message_2": "어려운 낱말은 뜻을 물어보고 다시 읽기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-13": {
+      "event": null,
+      "text": "1. 선생님과 부모님께 항상 감사한 마음 갖기",
+      "display_text": "1. 선생님과 부모님께 항상 감사한 마음 갖기",
+      "message_1": "선생님과 부모님께 항상 감사한 마음 갖기",
+      "message_2": "발표 전에는 말할 순서를 마음속으로 정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-14": {
+      "event": null,
+      "text": "1. 의자를 뒤로 뺄 때 뒤에 친구가 있는지 살피기",
+      "display_text": "1. 의자를 뒤로 뺄 때 뒤에 친구가 있는지 살피기",
+      "message_1": "의자를 뒤로 뺄 때 뒤에 친구가 있는지 살피기",
+      "message_2": "쓰기 전에는 무엇을 쓸지 짧게 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-15": {
+      "event": "스승의 날",
+      "text": "1. 스승의 날 : 고마운 마음을 말과 행동으로 표현하기",
+      "display_text": "1. 스승의 날 : 고마운 마음을 말과 행동으로 표현하기",
+      "message_1": "스승의 날 : 고마운 마음을 말과 행동으로 표현하기",
+      "message_2": "그림과 글을 함께 보며 내용을 이해하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-18": {
+      "event": null,
+      "text": "1. 떨어진 연필이나 지우개는 바로 주워 제자리에 두기",
+      "display_text": "1. 떨어진 연필이나 지우개는 바로 주워 제자리에 두기",
+      "message_1": "떨어진 연필이나 지우개는 바로 주워 제자리에 두기",
+      "message_2": "끝난 활동은 표시하고 다음 할 일 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-19": {
+      "event": null,
+      "text": "1. 교실 통로에는 가방과 물건을 놓아두지 않기",
+      "display_text": "1. 교실 통로에는 가방과 물건을 놓아두지 않기",
+      "message_1": "교실 통로에는 가방과 물건을 놓아두지 않기",
+      "message_2": "실수한 부분은 지우기보다 고쳐 쓴 흔적 남기기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-20": {
+      "event": "세계 벌의 날",
+      "text": "1. 세계 벌의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 세계 벌의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "세계 벌의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "오늘 배운 내용을 학교생활에서 한 번 써보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-21": {
+      "event": "대화와 발전을 위한 세계 문화다양성의 날",
+      "text": "1. 대화와 발전을 위한 세계 문화다양성의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "display_text": "1. 대화와 발전을 위한 세계 문화다양성의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "message_1": "대화와 발전을 위한 세계 문화다양성의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "message_2": "내 자리는 내가 먼저 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-22": {
+      "event": "세계 생물다양성의 날",
+      "text": "1. 세계 생물다양성의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "display_text": "1. 세계 생물다양성의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_1": "세계 생물다양성의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_2": "빌린 물건은 사용한 뒤 바로 돌려주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-25": {
+      "event": null,
+      "text": "1. 창문을 열고 닫을 때 몸을 밖으로 내밀지 않기",
+      "display_text": "1. 창문을 열고 닫을 때 몸을 밖으로 내밀지 않기",
+      "message_1": "창문을 열고 닫을 때 몸을 밖으로 내밀지 않기",
+      "message_2": "분실물을 보면 주인을 찾거나 선생님께 전하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-26": {
+      "event": null,
+      "text": "1. 높은 곳의 물건은 혼자 꺼내지 말고 도움 요청하기",
+      "display_text": "1. 높은 곳의 물건은 혼자 꺼내지 말고 도움 요청하기",
+      "message_1": "높은 곳의 물건은 혼자 꺼내지 말고 도움 요청하기",
+      "message_2": "급식 뒤 내 자리를 깨끗하게 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-27": {
+      "event": null,
+      "text": "1. 책상 위에 앉거나 올라가지 않기",
+      "display_text": "1. 책상 위에 앉거나 올라가지 않기",
+      "message_1": "책상 위에 앉거나 올라가지 않기",
+      "message_2": "청소 당번은 맡은 일을 확인하고 시작하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-28": {
+      "event": null,
+      "text": "1. 바닥에 떨어진 물건을 발견하면 바로 치우거나 알리기",
+      "display_text": "1. 바닥에 떨어진 물건을 발견하면 바로 치우거나 알리기",
+      "message_1": "바닥에 떨어진 물건을 발견하면 바로 치우거나 알리기",
+      "message_2": "준비물은 전날 가방에 넣었는지 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-05-29": {
+      "event": null,
+      "text": "1. 물통은 책상 가장자리보다 안쪽에 놓기",
+      "display_text": "1. 물통은 책상 가장자리보다 안쪽에 놓기",
+      "message_1": "물통은 책상 가장자리보다 안쪽에 놓기",
+      "message_2": "교실을 나갈 때 의자와 책상 상태 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-01": {
+      "event": "의병의 날",
+      "text": "1. 의병의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "display_text": "1. 의병의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_1": "의병의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_2": "공용 물건을 망가뜨렸다면 바로 사실을 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-02": {
+      "event": null,
+      "text": "1. 콘센트 근처에서 물병을 열어 두지 않기",
+      "display_text": "1. 콘센트 근처에서 물병을 열어 두지 않기",
+      "message_1": "콘센트 근처에서 물병을 열어 두지 않기",
+      "message_2": "내가 만든 쓰레기는 내가 버리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-03": {
+      "event": null,
+      "text": "1. 선풍기와 전자기기는 손가락을 넣지 않고 사용하기",
+      "display_text": "1. 선풍기와 전자기기는 손가락을 넣지 않고 사용하기",
+      "message_1": "선풍기와 전자기기는 손가락을 넣지 않고 사용하기",
+      "message_2": "책은 읽은 뒤 바르게 꽂아 두기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-04": {
+      "event": null,
+      "text": "1. 청소 도구는 사용한 뒤 제자리에 세워 두기",
+      "display_text": "1. 청소 도구는 사용한 뒤 제자리에 세워 두기",
+      "message_1": "청소 도구는 사용한 뒤 제자리에 세워 두기",
+      "message_2": "알림장 내용을 집에 가서 다시 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-05": {
+      "event": "환경의 날",
+      "text": "1. 환경의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "display_text": "1. 환경의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_1": "환경의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_2": "학급 약속은 보지 않아도 기억하려고 노력하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-08": {
+      "event": "세계 해양의 날",
+      "text": "1. 세계 해양의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 세계 해양의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "세계 해양의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "시간이 부족하면 먼저 해야 할 일을 고르기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-09": {
+      "event": null,
+      "text": "1. 교실 안에서는 공이나 딱딱한 물건을 던지지 않기",
+      "display_text": "1. 교실 안에서는 공이나 딱딱한 물건을 던지지 않기",
+      "message_1": "교실 안에서는 공이나 딱딱한 물건을 던지지 않기",
+      "message_2": "내 역할이 끝나면 필요한 친구를 도와보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-10": {
+      "event": "6·10민주항쟁 기념일",
+      "text": "1. 6·10민주항쟁 기념일 : 공동체를 위해 애쓴 분들을 기억하기",
+      "display_text": "1. 6·10민주항쟁 기념일 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_1": "6·10민주항쟁 기념일 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_2": "활동 도구는 개수와 상태를 확인하고 반납하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-11": {
+      "event": "국제 놀이의 날",
+      "text": "1. 국제 놀이의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 국제 놀이의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "국제 놀이의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "물건을 잃어버렸을 때 마지막으로 쓴 곳 떠올리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-12": {
+      "event": null,
+      "text": "1. 가방 지퍼와 끈을 정리해 넘어짐을 예방하기",
+      "display_text": "1. 가방 지퍼와 끈을 정리해 넘어짐을 예방하기",
+      "message_1": "가방 지퍼와 끈을 정리해 넘어짐을 예방하기",
+      "message_2": "정리 시간이 되면 하던 말을 줄이고 손부터 움직이기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-15": {
+      "event": null,
+      "text": "1. 개인 물건은 필요한 만큼만 책상 위에 올려두기",
+      "display_text": "1. 개인 물건은 필요한 만큼만 책상 위에 올려두기",
+      "message_1": "개인 물건은 필요한 만큼만 책상 위에 올려두기",
+      "message_2": "신발장과 사물함은 다음 사용을 생각해 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-16": {
+      "event": null,
+      "text": "1. 실내화 뒤꿈치를 구겨 신지 않고 바르게 신기",
+      "display_text": "1. 실내화 뒤꿈치를 구겨 신지 않고 바르게 신기",
+      "message_1": "실내화 뒤꿈치를 구겨 신지 않고 바르게 신기",
+      "message_2": "사용한 컵과 휴지는 정해진 곳에 버리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-17": {
+      "event": "세계 사막화와 가뭄 방지의 날",
+      "text": "1. 세계 사막화와 가뭄 방지의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "display_text": "1. 세계 사막화와 가뭄 방지의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_1": "세계 사막화와 가뭄 방지의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_2": "마무리하지 못한 일은 언제 할지 정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-18": {
+      "event": "혐오표현 대응의 날",
+      "text": "1. 혐오표현 대응의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 혐오표현 대응의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "혐오표현 대응의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "약속한 시간에 맞춰 활동을 끝내기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-19": {
+      "event": null,
+      "text": "1. 계단에서는 한 칸씩 차례대로 오르내리기",
+      "display_text": "1. 계단에서는 한 칸씩 차례대로 오르내리기",
+      "message_1": "계단에서는 한 칸씩 차례대로 오르내리기",
+      "message_2": "내 물건에는 이름을 쓰고 스스로 챙기기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-22": {
+      "event": null,
+      "text": "1. 계단 난간을 타거나 매달리지 않기",
+      "display_text": "1. 계단 난간을 타거나 매달리지 않기",
+      "message_1": "계단 난간을 타거나 매달리지 않기",
+      "message_2": "학교 물건은 모두가 함께 쓰는 것임을 기억하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-23": {
+      "event": null,
+      "text": "1. 계단에서 친구를 앞지르려고 밀지 않기",
+      "display_text": "1. 계단에서 친구를 앞지르려고 밀지 않기",
+      "message_1": "계단에서 친구를 앞지르려고 밀지 않기",
+      "message_2": "친구에게 맡긴 일도 함께 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-24": {
+      "event": null,
+      "text": "1. 복도 모퉁이를 돌 때 속도를 줄이고 앞을 보기",
+      "display_text": "1. 복도 모퉁이를 돌 때 속도를 줄이고 앞을 보기",
+      "message_1": "복도 모퉁이를 돌 때 속도를 줄이고 앞을 보기",
+      "message_2": "오늘 해야 할 일을 하나씩 지우며 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-25": {
+      "event": null,
+      "text": "1. 교실 밖으로 나갈 때 문 앞에서 잠시 멈추고 살피기",
+      "display_text": "1. 교실 밖으로 나갈 때 문 앞에서 잠시 멈추고 살피기",
+      "message_1": "교실 밖으로 나갈 때 문 앞에서 잠시 멈추고 살피기",
+      "message_2": "다툼이 생기면 먼저 몸을 멈추고 거리 두기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-26": {
+      "event": null,
+      "text": "1. 복도 바닥이 젖어 있으면 돌아서 가거나 선생님께 알리기",
+      "display_text": "1. 복도 바닥이 젖어 있으면 돌아서 가거나 선생님께 알리기",
+      "message_1": "복도 바닥이 젖어 있으면 돌아서 가거나 선생님께 알리기",
+      "message_2": "누가 맞는지보다 무슨 일이 있었는지 차례로 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-29": {
+      "event": null,
+      "text": "1. 화장실 앞과 급식실 앞에서는 줄을 지켜 기다리기",
+      "display_text": "1. 화장실 앞과 급식실 앞에서는 줄을 지켜 기다리기",
+      "message_1": "화장실 앞과 급식실 앞에서는 줄을 지켜 기다리기",
+      "message_2": "친구 말이 사실과 다르면 차분히 내 기억 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-06-30": {
+      "event": null,
+      "text": "1. 계단에서 신발끈이 풀리면 안전한 곳에서 다시 묶기",
+      "display_text": "1. 계단에서 신발끈이 풀리면 안전한 곳에서 다시 묶기",
+      "message_1": "계단에서 신발끈이 풀리면 안전한 곳에서 다시 묶기",
+      "message_2": "사과할 때는 내가 한 행동을 분명히 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-01": {
+      "event": null,
+      "text": "1. 이동 수업 때는 앞 친구와 간격을 두고 걷기",
+      "display_text": "1. 이동 수업 때는 앞 친구와 간격을 두고 걷기",
+      "message_1": "이동 수업 때는 앞 친구와 간격을 두고 걷기",
+      "message_2": "화해가 바로 어렵다면 시간을 갖자고 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-02": {
+      "event": null,
+      "text": "1. 많은 친구가 이동할 때 장난치지 않고 흐름에 맞춰 걷기",
+      "display_text": "1. 많은 친구가 이동할 때 장난치지 않고 흐름에 맞춰 걷기",
+      "message_1": "많은 친구가 이동할 때 장난치지 않고 흐름에 맞춰 걷기",
+      "message_2": "친구 물건을 망가뜨렸다면 숨기지 않고 알리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-03": {
+      "event": null,
+      "text": "1. 복도에서 문이 열릴 수 있는 곳은 한 걸음 떨어져 지나가기",
+      "display_text": "1. 복도에서 문이 열릴 수 있는 곳은 한 걸음 떨어져 지나가기",
+      "message_1": "복도에서 문이 열릴 수 있는 곳은 한 걸음 떨어져 지나가기",
+      "message_2": "장난이 다툼으로 바뀌면 바로 멈추기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-06": {
+      "event": null,
+      "text": "1. 계단을 내려갈 때 뛰어내리지 않고 발밑을 확인하기",
+      "display_text": "1. 계단을 내려갈 때 뛰어내리지 않고 발밑을 확인하기",
+      "message_1": "계단을 내려갈 때 뛰어내리지 않고 발밑을 확인하기",
+      "message_2": "내가 싫은 행동은 짧고 분명하게 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-07": {
+      "event": null,
+      "text": "1. 비상구와 소화전 앞에 물건을 놓지 않기",
+      "display_text": "1. 비상구와 소화전 앞에 물건을 놓지 않기",
+      "message_1": "비상구와 소화전 앞에 물건을 놓지 않기",
+      "message_2": "친구가 싫다고 한 행동은 반복하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-08": {
+      "event": null,
+      "text": "1. 복도 게시물이나 유리창을 손으로 치며 장난하지 않기",
+      "display_text": "1. 복도 게시물이나 유리창을 손으로 치며 장난하지 않기",
+      "message_1": "복도 게시물이나 유리창을 손으로 치며 장난하지 않기",
+      "message_2": "갈등을 해결할 때 선생님 도움을 받을 수 있음을 기억하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-09": {
+      "event": null,
+      "text": "1. 줄을 설 때 앞 친구의 가방을 잡아당기지 않기",
+      "display_text": "1. 줄을 설 때 앞 친구의 가방을 잡아당기지 않기",
+      "message_1": "줄을 설 때 앞 친구의 가방을 잡아당기지 않기",
+      "message_2": "내 말 때문에 친구가 속상했는지 물어보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-10": {
+      "event": null,
+      "text": "1. 화장실 문을 세게 밀거나 발로 차지 않기",
+      "display_text": "1. 화장실 문을 세게 밀거나 발로 차지 않기",
+      "message_1": "화장실 문을 세게 밀거나 발로 차지 않기",
+      "message_2": "친구가 사과하면 들은 뒤 내 마음을 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-13": {
+      "event": null,
+      "text": "1. 교문과 현관에서는 뛰지 않고 주변 사람을 살피기",
+      "display_text": "1. 교문과 현관에서는 뛰지 않고 주변 사람을 살피기",
+      "message_1": "교문과 현관에서는 뛰지 않고 주변 사람을 살피기",
+      "message_2": "오해가 생기면 들은 말과 본 일을 구분하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-14": {
+      "event": null,
+      "text": "1. 우산을 접고 펼 때 주변 친구와 거리를 두기",
+      "display_text": "1. 우산을 접고 펼 때 주변 친구와 거리를 두기",
+      "message_1": "우산을 접고 펼 때 주변 친구와 거리를 두기",
+      "message_2": "여럿이 이야기할 때 한 사람씩 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-15": {
+      "event": "세계 청년 기술의 날",
+      "text": "1. 세계 청년 기술의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 세계 청년 기술의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "세계 청년 기술의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "친구 편을 나누기보다 해결 방법을 찾기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-16": {
+      "event": null,
+      "text": "1. 좁은 통로에서는 먼저 지나가려 다투지 않기",
+      "display_text": "1. 좁은 통로에서는 먼저 지나가려 다투지 않기",
+      "message_1": "좁은 통로에서는 먼저 지나가려 다투지 않기",
+      "message_2": "놀림을 봤을 때 웃지 않고 멈추라고 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-17": {
+      "event": "제헌절",
+      "text": "1. 제헌절 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 제헌절 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "제헌절 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "친구가 도움을 청하면 혼자 판단하지 말고 어른께 알리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-20": {
+      "event": null,
+      "text": "1. 무거운 물건을 들고 계단을 오를 때 도움 요청하기",
+      "display_text": "1. 무거운 물건을 들고 계단을 오를 때 도움 요청하기",
+      "message_1": "무거운 물건을 들고 계단을 오를 때 도움 요청하기",
+      "message_2": "같은 일이 반복되면 기록하고 선생님께 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-21": {
+      "event": null,
+      "text": "1. 복도에서는 큰 소리로 뛰어나오지 않기",
+      "display_text": "1. 복도에서는 큰 소리로 뛰어나오지 않기",
+      "message_1": "복도에서는 큰 소리로 뛰어나오지 않기",
+      "message_2": "화난 마음으로 메시지를 보내지 않고 잠시 기다리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-22": {
+      "event": null,
+      "text": "1. 정해진 이동 길을 벗어나 위험한 곳으로 가지 않기",
+      "display_text": "1. 정해진 이동 길을 벗어나 위험한 곳으로 가지 않기",
+      "message_1": "정해진 이동 길을 벗어나 위험한 곳으로 가지 않기",
+      "message_2": "친구의 별명 사용이 불편하면 바로 바꿔 부르기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-23": {
+      "event": null,
+      "text": "1. 운동 전에는 준비 운동으로 몸을 가볍게 풀기",
+      "display_text": "1. 운동 전에는 준비 운동으로 몸을 가볍게 풀기",
+      "message_1": "운동 전에는 준비 운동으로 몸을 가볍게 풀기",
+      "message_2": "다툼 뒤에도 수업과 놀이 규칙은 지키기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-24": {
+      "event": null,
+      "text": "1. 공을 찰 때 주변에 친구가 가까이 있는지 확인하기",
+      "display_text": "1. 공을 찰 때 주변에 친구가 가까이 있는지 확인하기",
+      "message_1": "공을 찰 때 주변에 친구가 가까이 있는지 확인하기",
+      "message_2": "친구의 사과를 강요하지 않고 필요한 도움 요청하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-27": {
+      "event": null,
+      "text": "1. 공을 던질 때 받는 친구가 보고 있는지 확인하기",
+      "display_text": "1. 공을 던질 때 받는 친구가 보고 있는지 확인하기",
+      "message_1": "공을 던질 때 받는 친구가 보고 있는지 확인하기",
+      "message_2": "속상한 친구에게 왜 그러냐고 따지기보다 괜찮은지 묻기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-28": {
+      "event": null,
+      "text": "1. 운동장에서는 놀이 규칙을 먼저 확인하고 참여하기",
+      "display_text": "1. 운동장에서는 놀이 규칙을 먼저 확인하고 참여하기",
+      "message_1": "운동장에서는 놀이 규칙을 먼저 확인하고 참여하기",
+      "message_2": "억울한 마음은 사실과 느낌을 나누어 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-29": {
+      "event": null,
+      "text": "1. 달리기 전 신발끈이 풀리지 않았는지 확인하기",
+      "display_text": "1. 달리기 전 신발끈이 풀리지 않았는지 확인하기",
+      "message_1": "달리기 전 신발끈이 풀리지 않았는지 확인하기",
+      "message_2": "서로의 말을 들은 뒤 다시 할 약속 하나 정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-30": {
+      "event": "국제 우정의 날",
+      "text": "1. 국제 우정의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 국제 우정의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "국제 우정의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "친구마다 잘하는 것이 다름을 인정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-07-31": {
+      "event": null,
+      "text": "1. 그네 가까이에 서 있지 않고 안전한 거리에서 기다리기",
+      "display_text": "1. 그네 가까이에 서 있지 않고 안전한 거리에서 기다리기",
+      "message_1": "그네 가까이에 서 있지 않고 안전한 거리에서 기다리기",
+      "message_2": "느린 친구를 재촉하지 않고 기다려 주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-03": {
+      "event": null,
+      "text": "1. 시소를 탈 때 친구가 준비되었는지 확인하기",
+      "display_text": "1. 시소를 탈 때 친구가 준비되었는지 확인하기",
+      "message_1": "시소를 탈 때 친구가 준비되었는지 확인하기",
+      "message_2": "다른 나라 말과 이름을 놀리지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-04": {
+      "event": null,
+      "text": "1. 미끄럼틀은 올라가는 곳과 내려오는 곳을 지켜 이용하기",
+      "display_text": "1. 미끄럼틀은 올라가는 곳과 내려오는 곳을 지켜 이용하기",
+      "message_1": "미끄럼틀은 올라가는 곳과 내려오는 곳을 지켜 이용하기",
+      "message_2": "친구의 생김새를 평가하는 말 하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-05": {
+      "event": null,
+      "text": "1. 운동장에서 돌이나 모래를 던지지 않기",
+      "display_text": "1. 운동장에서 돌이나 모래를 던지지 않기",
+      "message_1": "운동장에서 돌이나 모래를 던지지 않기",
+      "message_2": "나와 다른 생각도 배울 점이 있는지 살피기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-06": {
+      "event": null,
+      "text": "1. 체육 도구는 선생님 안내에 따라 꺼내고 정리하기",
+      "display_text": "1. 체육 도구는 선생님 안내에 따라 꺼내고 정리하기",
+      "message_1": "체육 도구는 선생님 안내에 따라 꺼내고 정리하기",
+      "message_2": "도움이 필요한 친구에게 먼저 물어보고 돕기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-07": {
+      "event": null,
+      "text": "1. 놀이하다 다치면 참지 말고 바로 선생님께 알리기",
+      "display_text": "1. 놀이하다 다치면 참지 말고 바로 선생님께 알리기",
+      "message_1": "놀이하다 다치면 참지 말고 바로 선생님께 알리기",
+      "message_2": "친구의 가족 이야기를 함부로 말하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-10": {
+      "event": null,
+      "text": "1. 몸이 어지럽거나 숨이 차면 참고 뛰지 말고 알리기",
+      "display_text": "1. 몸이 어지럽거나 숨이 차면 참고 뛰지 말고 알리기",
+      "message_1": "몸이 어지럽거나 숨이 차면 참고 뛰지 말고 알리기",
+      "message_2": "새로운 방법을 제안한 친구에게 이유 물어보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-11": {
+      "event": null,
+      "text": "1. 더운 날에는 활동 중 물을 마시고 그늘에서 쉬기",
+      "display_text": "1. 더운 날에는 활동 중 물을 마시고 그늘에서 쉬기",
+      "message_1": "더운 날에는 활동 중 물을 마시고 그늘에서 쉬기",
+      "message_2": "모두가 참여할 수 있는 놀이 방법 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-12": {
+      "event": "국제 청소년의 날",
+      "text": "1. 국제 청소년의 날 : 나와 친구의 권리를 함께 존중하기",
+      "display_text": "1. 국제 청소년의 날 : 나와 친구의 권리를 함께 존중하기",
+      "message_1": "국제 청소년의 날 : 나와 친구의 권리를 함께 존중하기",
+      "message_2": "친구의 작품은 비교보다 좋은 점부터 보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-13": {
+      "event": null,
+      "text": "1. 친구 몸을 잡아당기거나 밀며 장난치지 않기",
+      "display_text": "1. 친구 몸을 잡아당기거나 밀며 장난치지 않기",
+      "message_1": "친구 몸을 잡아당기거나 밀며 장난치지 않기",
+      "message_2": "말이 서툰 친구도 끝까지 말할 시간 주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-14": {
+      "event": null,
+      "text": "1. 운동장 경계 밖으로 공을 따라 뛰어나가지 않기",
+      "display_text": "1. 운동장 경계 밖으로 공을 따라 뛰어나가지 않기",
+      "message_1": "운동장 경계 밖으로 공을 따라 뛰어나가지 않기",
+      "message_2": "실수는 누구나 할 수 있음을 기억하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-17": {
+      "event": null,
+      "text": "1. 체육 시간에는 장난보다 안전한 움직임을 먼저 생각하기",
+      "display_text": "1. 체육 시간에는 장난보다 안전한 움직임을 먼저 생각하기",
+      "message_1": "체육 시간에는 장난보다 안전한 움직임을 먼저 생각하기",
+      "message_2": "친구의 종교와 문화 이야기를 존중해서 듣기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-18": {
+      "event": null,
+      "text": "1. 공을 주울 때 주변 움직임을 살피고 천천히 이동하기",
+      "display_text": "1. 공을 주울 때 주변 움직임을 살피고 천천히 이동하기",
+      "message_1": "공을 주울 때 주변 움직임을 살피고 천천히 이동하기",
+      "message_2": "내 기준으로 친구를 이상하다고 말하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-19": {
+      "event": null,
+      "text": "1. 사용한 체육 도구는 통로에 두지 않고 제자리에 놓기",
+      "display_text": "1. 사용한 체육 도구는 통로에 두지 않고 제자리에 놓기",
+      "message_1": "사용한 체육 도구는 통로에 두지 않고 제자리에 놓기",
+      "message_2": "혼자 있고 싶은 마음도 존중하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-20": {
+      "event": null,
+      "text": "1. 체육 활동 전 안경과 소지품을 안전하게 정리하기",
+      "display_text": "1. 체육 활동 전 안경과 소지품을 안전하게 정리하기",
+      "message_1": "체육 활동 전 안경과 소지품을 안전하게 정리하기",
+      "message_2": "도움이 필요 없어 보이는 친구에게도 의사를 물어보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-21": {
+      "event": null,
+      "text": "1. 무리한 동작은 따라 하지 않고 할 수 있는 만큼 참여하기",
+      "display_text": "1. 무리한 동작은 따라 하지 않고 할 수 있는 만큼 참여하기",
+      "message_1": "무리한 동작은 따라 하지 않고 할 수 있는 만큼 참여하기",
+      "message_2": "칭찬은 겉모습보다 노력과 행동에 하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-24": {
+      "event": null,
+      "text": "1. 게임에서 이기고 져도 친구를 놀리거나 밀지 않기",
+      "display_text": "1. 게임에서 이기고 져도 친구를 놀리거나 밀지 않기",
+      "message_1": "게임에서 이기고 져도 친구를 놀리거나 밀지 않기",
+      "message_2": "친구가 좋아하는 것을 무시하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-25": {
+      "event": null,
+      "text": "1. 넓은 곳에서 뛰기 전 방향을 정하고 출발하기",
+      "display_text": "1. 넓은 곳에서 뛰기 전 방향을 정하고 출발하기",
+      "message_1": "넓은 곳에서 뛰기 전 방향을 정하고 출발하기",
+      "message_2": "다름을 이유로 편을 가르지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-26": {
+      "event": null,
+      "text": "1. 신체 접촉이 생기면 바로 멈추고 괜찮은지 확인하기",
+      "display_text": "1. 신체 접촉이 생기면 바로 멈추고 괜찮은지 확인하기",
+      "message_1": "신체 접촉이 생기면 바로 멈추고 괜찮은지 확인하기",
+      "message_2": "발표가 서툰 친구에게 조용히 응원 보내기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-27": {
+      "event": null,
+      "text": "1. 식사 전과 화장실 이용 후에는 비누로 손 씻기",
+      "display_text": "1. 식사 전과 화장실 이용 후에는 비누로 손 씻기",
+      "message_1": "식사 전과 화장실 이용 후에는 비누로 손 씻기",
+      "message_2": "친구의 자리와 물건을 내 마음대로 정하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-28": {
+      "event": null,
+      "text": "1. 기침이나 재채기를 할 때 옷소매로 입과 코 가리기",
+      "display_text": "1. 기침이나 재채기를 할 때 옷소매로 입과 코 가리기",
+      "message_1": "기침이나 재채기를 할 때 옷소매로 입과 코 가리기",
+      "message_2": "서로의 이름을 정확하게 부르려고 노력하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-08-31": {
+      "event": null,
+      "text": "1. 개인 물병과 수저는 친구와 바꾸어 쓰지 않기",
+      "display_text": "1. 개인 물병과 수저는 친구와 바꾸어 쓰지 않기",
+      "message_1": "개인 물병과 수저는 친구와 바꾸어 쓰지 않기",
+      "message_2": "몸이 불편한 친구의 이동 길을 막지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-01": {
+      "event": "통계의 날",
+      "text": "1. 통계의 날 : 우리 생활을 돕는 일을 알고 감사하기",
+      "display_text": "1. 통계의 날 : 우리 생활을 돕는 일을 알고 감사하기",
+      "message_1": "통계의 날 : 우리 생활을 돕는 일을 알고 감사하기",
+      "message_2": "친구의 말투를 따라 하며 놀리지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-02": {
+      "event": null,
+      "text": "1. 급식은 천천히 씹어 먹고 장난치지 않기",
+      "display_text": "1. 급식은 천천히 씹어 먹고 장난치지 않기",
+      "message_1": "급식은 천천히 씹어 먹고 장난치지 않기",
+      "message_2": "우리 반 모두가 안전하게 지낼 방법 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-03": {
+      "event": null,
+      "text": "1. 알레르기가 있는 음식은 먹기 전에 선생님께 확인하기",
+      "display_text": "1. 알레르기가 있는 음식은 먹기 전에 선생님께 확인하기",
+      "message_1": "알레르기가 있는 음식은 먹기 전에 선생님께 확인하기",
+      "message_2": "아침에 만나는 사람에게 밝게 인사하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-04": {
+      "event": null,
+      "text": "1. 약은 선생님과 보호자 안내 없이 함부로 먹지 않기",
+      "display_text": "1. 약은 선생님과 보호자 안내 없이 함부로 먹지 않기",
+      "message_1": "약은 선생님과 보호자 안내 없이 함부로 먹지 않기",
+      "message_2": "학교에서 일하시는 분들께 감사한 마음 갖기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-07": {
+      "event": "사회복지의 날",
+      "text": "1. 사회복지의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "display_text": "1. 사회복지의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_1": "사회복지의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_2": "복도에서 손님을 만나면 조용히 길 비켜주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-08": {
+      "event": "세계 문해의 날",
+      "text": "1. 세계 문해의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "display_text": "1. 세계 문해의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "message_1": "세계 문해의 날 : 배운 내용을 차분히 살피고 즐겁게 참여하기",
+      "message_2": "학급 회의에서는 친구의 말을 듣고 내 생각 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-09": {
+      "event": null,
+      "text": "1. 상처가 나면 만지지 말고 깨끗하게 처치받기",
+      "display_text": "1. 상처가 나면 만지지 말고 깨끗하게 처치받기",
+      "message_1": "상처가 나면 만지지 말고 깨끗하게 처치받기",
+      "message_2": "학급 약속을 바꿀 때 모두의 의견 듣기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-10": {
+      "event": null,
+      "text": "1. 눈에 먼지가 들어가면 비비지 말고 도움 요청하기",
+      "display_text": "1. 눈에 먼지가 들어가면 비비지 말고 도움 요청하기",
+      "message_1": "눈에 먼지가 들어가면 비비지 말고 도움 요청하기",
+      "message_2": "활동을 시작하기 전에 내가 맡은 일 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-11": {
+      "event": null,
+      "text": "1. 뜨거운 국이나 물은 두 손으로 천천히 옮기기",
+      "display_text": "1. 뜨거운 국이나 물은 두 손으로 천천히 옮기기",
+      "message_1": "뜨거운 국이나 물은 두 손으로 천천히 옮기기",
+      "message_2": "학교 시설을 깨끗하게 사용하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-14": {
+      "event": null,
+      "text": "1. 급식실에서는 식판을 들고 뛰지 않기",
+      "display_text": "1. 급식실에서는 식판을 들고 뛰지 않기",
+      "message_1": "급식실에서는 식판을 들고 뛰지 않기",
+      "message_2": "공공장소에서는 내 목소리 크기를 조절하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-15": {
+      "event": null,
+      "text": "1. 음료나 물을 쏟으면 바로 닦거나 알리기",
+      "display_text": "1. 음료나 물을 쏟으면 바로 닦거나 알리기",
+      "message_1": "음료나 물을 쏟으면 바로 닦거나 알리기",
+      "message_2": "도서관에서는 책 읽는 친구를 방해하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-16": {
+      "event": "세계 오존층 보호의 날",
+      "text": "1. 세계 오존층 보호의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "display_text": "1. 세계 오존층 보호의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_1": "세계 오존층 보호의 날 : 생활 속에서 자연을 아끼는 행동 한 가지 실천하기",
+      "message_2": "급식실에서는 배식해 주시는 분께 감사 인사하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-17": {
+      "event": null,
+      "text": "1. 손톱은 짧고 깨끗하게 관리하기",
+      "display_text": "1. 손톱은 짧고 깨끗하게 관리하기",
+      "message_1": "손톱은 짧고 깨끗하게 관리하기",
+      "message_2": "화장실은 다음 사람이 쓰기 좋게 사용하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-18": {
+      "event": null,
+      "text": "1. 양치할 때 친구에게 물을 튀기며 장난하지 않기",
+      "display_text": "1. 양치할 때 친구에게 물을 튀기며 장난하지 않기",
+      "message_1": "양치할 때 친구에게 물을 튀기며 장난하지 않기",
+      "message_2": "운동장은 함께 쓰는 공간임을 생각하며 놀기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-21": {
+      "event": "국제 평화의 날",
+      "text": "1. 국제 평화의 날 : 평화를 위해 노력한 사람들을 기억하기",
+      "display_text": "1. 국제 평화의 날 : 평화를 위해 노력한 사람들을 기억하기",
+      "message_1": "국제 평화의 날 : 평화를 위해 노력한 사람들을 기억하기",
+      "message_2": "교실 규칙은 선생님만의 규칙이 아니라 우리 약속으로 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-22": {
+      "event": null,
+      "text": "1. 물비누와 소독제는 장난감처럼 사용하지 않기",
+      "display_text": "1. 물비누와 소독제는 장난감처럼 사용하지 않기",
+      "message_1": "물비누와 소독제는 장난감처럼 사용하지 않기",
+      "message_2": "함께 쓰는 물건은 사용한 뒤 제자리에 두기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-23": {
+      "event": "세계 수어의 날",
+      "text": "1. 세계 수어의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "display_text": "1. 세계 수어의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_1": "세계 수어의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_2": "활동이 끝나면 사용한 자리를 스스로 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-24": {
+      "event": null,
+      "text": "1. 쉬는 시간에는 몸 상태를 살피고 필요한 휴식 갖기",
+      "display_text": "1. 쉬는 시간에는 몸 상태를 살피고 필요한 휴식 갖기",
+      "message_1": "쉬는 시간에는 몸 상태를 살피고 필요한 휴식 갖기",
+      "message_2": "작은 도움을 받았을 때도 고마움을 표현하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-25": {
+      "event": null,
+      "text": "1. 피곤하거나 속이 불편하면 혼자 참지 않고 말하기",
+      "display_text": "1. 피곤하거나 속이 불편하면 혼자 참지 않고 말하기",
+      "message_1": "피곤하거나 속이 불편하면 혼자 참지 않고 말하기",
+      "message_2": "친구의 좋은 행동을 발견하면 함께 칭찬하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-28": {
+      "event": null,
+      "text": "1. 음식 포장지는 바닥에 두지 않고 바로 버리기",
+      "display_text": "1. 음식 포장지는 바닥에 두지 않고 바로 버리기",
+      "message_1": "음식 포장지는 바닥에 두지 않고 바로 버리기",
+      "message_2": "우리 반 문제는 비난보다 해결 방법부터 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-29": {
+      "event": null,
+      "text": "1. 입에 넣으면 안 되는 물건은 장난으로 물지 않기",
+      "display_text": "1. 입에 넣으면 안 되는 물건은 장난으로 물지 않기",
+      "message_1": "입에 넣으면 안 되는 물건은 장난으로 물지 않기",
+      "message_2": "친구에게 교실 물건 사용 방법 친절하게 알려주기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-09-30": {
+      "event": null,
+      "text": "1. 친구의 컵이나 빨대를 허락 없이 사용하지 않기",
+      "display_text": "1. 친구의 컵이나 빨대를 허락 없이 사용하지 않기",
+      "message_1": "친구의 컵이나 빨대를 허락 없이 사용하지 않기",
+      "message_2": "모두가 볼 게시물은 바르게 붙이고 아껴 보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-01": {
+      "event": "국군의 날",
+      "text": "1. 국군의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "display_text": "1. 국군의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_1": "국군의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_2": "학교 물건을 망가뜨리지 않도록 조심해서 쓰기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-02": {
+      "event": null,
+      "text": "1. 칼이나 송곳은 선생님 안내가 있을 때만 사용하기",
+      "display_text": "1. 칼이나 송곳은 선생님 안내가 있을 때만 사용하기",
+      "message_1": "칼이나 송곳은 선생님 안내가 있을 때만 사용하기",
+      "message_2": "함께 쓰는 공간에서는 뛰기보다 걷기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-05": {
+      "event": null,
+      "text": "1. 연필은 끝이 친구 쪽을 향하지 않게 다루기",
+      "display_text": "1. 연필은 끝이 친구 쪽을 향하지 않게 다루기",
+      "message_1": "연필은 끝이 친구 쪽을 향하지 않게 다루기",
+      "message_2": "학급 활동에서는 혼자 돋보이기보다 함께 완성하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-06": {
+      "event": null,
+      "text": "1. 자와 각도기는 휘두르지 않고 책상 위에서 사용하기",
+      "display_text": "1. 자와 각도기는 휘두르지 않고 책상 위에서 사용하기",
+      "message_1": "자와 각도기는 휘두르지 않고 책상 위에서 사용하기",
+      "message_2": "모르는 사람이 학교 안에 있으면 선생님께 알리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-07": {
+      "event": null,
+      "text": "1. 풀과 테이프는 필요한 만큼만 사용하고 뚜껑 닫기",
+      "display_text": "1. 풀과 테이프는 필요한 만큼만 사용하고 뚜껑 닫기",
+      "message_1": "풀과 테이프는 필요한 만큼만 사용하고 뚜껑 닫기",
+      "message_2": "하루를 마칠 때 책상과 주변 정리하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-08": {
+      "event": null,
+      "text": "1. 물감과 색연필은 입에 넣지 않고 사용하기",
+      "display_text": "1. 물감과 색연필은 입에 넣지 않고 사용하기",
+      "message_1": "물감과 색연필은 입에 넣지 않고 사용하기",
+      "message_2": "말을 걸기 전 상대가 들을 준비가 되었는지 살피기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-09": {
+      "event": "한글날",
+      "text": "1. 한글날 : 바른 우리말로 생각을 또박또박 표현하기",
+      "display_text": "1. 한글날 : 바른 우리말로 생각을 또박또박 표현하기",
+      "message_1": "한글날 : 바른 우리말로 생각을 또박또박 표현하기",
+      "message_2": "친구의 책상과 사물함은 허락 없이 열지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-12": {
+      "event": null,
+      "text": "1. 실험 도구는 만지기 전 선생님 설명을 듣기",
+      "display_text": "1. 실험 도구는 만지기 전 선생님 설명을 듣기",
+      "message_1": "실험 도구는 만지기 전 선생님 설명을 듣기",
+      "message_2": "다른 사람의 물건은 먼저 허락받고 사용하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-13": {
+      "event": "국제 재해 위험 경감의 날",
+      "text": "1. 국제 재해 위험 경감의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 국제 재해 위험 경감의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "국제 재해 위험 경감의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "식사 중에는 음식으로 장난하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-14": {
+      "event": null,
+      "text": "1. 컴퍼스는 뾰족한 부분을 친구에게 향하지 않기",
+      "display_text": "1. 컴퍼스는 뾰족한 부분을 친구에게 향하지 않기",
+      "message_1": "컴퍼스는 뾰족한 부분을 친구에게 향하지 않기",
+      "message_2": "줄을 설 때 새치기하지 않고 차례 기다리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-15": {
+      "event": null,
+      "text": "1. 종이를 자를 때 손가락 위치를 확인하기",
+      "display_text": "1. 종이를 자를 때 손가락 위치를 확인하기",
+      "message_1": "종이를 자를 때 손가락 위치를 확인하기",
+      "message_2": "문을 지나갈 때 뒤 사람을 살피고 천천히 닫기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-16": {
+      "event": null,
+      "text": "1. 무거운 책이나 상자는 두 손으로 들고 천천히 옮기기",
+      "display_text": "1. 무거운 책이나 상자는 두 손으로 들고 천천히 옮기기",
+      "message_1": "무거운 책이나 상자는 두 손으로 들고 천천히 옮기기",
+      "message_2": "친구가 집중할 때 일부러 방해하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-19": {
+      "event": null,
+      "text": "1. 물건을 친구에게 건넬 때 던지지 않고 직접 주기",
+      "display_text": "1. 물건을 친구에게 건넬 때 던지지 않고 직접 주기",
+      "message_1": "물건을 친구에게 건넬 때 던지지 않고 직접 주기",
+      "message_2": "빌려준 물건이 돌아오지 않으면 차분히 물어보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-20": {
+      "event": null,
+      "text": "1. 분필과 보드마카는 정해진 곳에서만 사용하기",
+      "display_text": "1. 분필과 보드마카는 정해진 곳에서만 사용하기",
+      "message_1": "분필과 보드마카는 정해진 곳에서만 사용하기",
+      "message_2": "수업 중 이동할 때 주변 친구에게 방해되지 않게 하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-21": {
+      "event": null,
+      "text": "1. 청소기와 전기 코드는 잡아당기지 않고 정리하기",
+      "display_text": "1. 청소기와 전기 코드는 잡아당기지 않고 정리하기",
+      "message_1": "청소기와 전기 코드는 잡아당기지 않고 정리하기",
+      "message_2": "친구의 이야기를 다른 곳에 옮기기 전 허락받기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-22": {
+      "event": null,
+      "text": "1. 책을 높이 쌓아 무너지게 하지 않기",
+      "display_text": "1. 책을 높이 쌓아 무너지게 하지 않기",
+      "message_1": "책을 높이 쌓아 무너지게 하지 않기",
+      "message_2": "칭찬받은 친구에게 함께 박수 보내기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-23": {
+      "event": null,
+      "text": "1. 사물함 문을 열고 닫을 때 주변 친구 살피기",
+      "display_text": "1. 사물함 문을 열고 닫을 때 주변 친구 살피기",
+      "message_1": "사물함 문을 열고 닫을 때 주변 친구 살피기",
+      "message_2": "내가 늦었을 때 조용히 들어와 흐름을 맞추기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-26": {
+      "event": null,
+      "text": "1. 깨진 물건은 직접 만지지 말고 선생님께 알리기",
+      "display_text": "1. 깨진 물건은 직접 만지지 말고 선생님께 알리기",
+      "message_1": "깨진 물건은 직접 만지지 말고 선생님께 알리기",
+      "message_2": "공용 자료를 가져갈 때 필요한 만큼만 가져가기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-27": {
+      "event": null,
+      "text": "1. 날카로운 종이 모서리에 베이지 않게 조심하기",
+      "display_text": "1. 날카로운 종이 모서리에 베이지 않게 조심하기",
+      "message_1": "날카로운 종이 모서리에 베이지 않게 조심하기",
+      "message_2": "친구가 그만하라고 하면 장난을 멈추기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-28": {
+      "event": null,
+      "text": "1. 물건을 빌릴 때는 허락을 받고 사용 후 돌려주기",
+      "display_text": "1. 물건을 빌릴 때는 허락을 받고 사용 후 돌려주기",
+      "message_1": "물건을 빌릴 때는 허락을 받고 사용 후 돌려주기",
+      "message_2": "말실수했을 때 바로 고쳐 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-29": {
+      "event": null,
+      "text": "1. 미술 재료를 나눌 때 친구 손을 밀치지 않기",
+      "display_text": "1. 미술 재료를 나눌 때 친구 손을 밀치지 않기",
+      "message_1": "미술 재료를 나눌 때 친구 손을 밀치지 않기",
+      "message_2": "친구의 순서를 대신 정하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-10-30": {
+      "event": null,
+      "text": "1. 실험 후 손을 씻고 책상을 정리하기",
+      "display_text": "1. 실험 후 손을 씻고 책상을 정리하기",
+      "message_1": "실험 후 손을 씻고 책상을 정리하기",
+      "message_2": "선생님 설명 중에는 하던 말을 멈추기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-02": {
+      "event": null,
+      "text": "1. 전자기기는 젖은 손으로 만지지 않기",
+      "display_text": "1. 전자기기는 젖은 손으로 만지지 않기",
+      "message_1": "전자기기는 젖은 손으로 만지지 않기",
+      "message_2": "교실에 들어올 때 문을 세게 닫지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-03": {
+      "event": "학생독립운동 기념일",
+      "text": "1. 학생독립운동 기념일 : 나와 친구의 권리를 함께 존중하기",
+      "display_text": "1. 학생독립운동 기념일 : 나와 친구의 권리를 함께 존중하기",
+      "message_1": "학생독립운동 기념일 : 나와 친구의 권리를 함께 존중하기",
+      "message_2": "활동 중 생긴 소음은 스스로 줄이기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-04": {
+      "event": null,
+      "text": "1. 학용품으로 친구를 찌르거나 놀라게 하지 않기",
+      "display_text": "1. 학용품으로 친구를 찌르거나 놀라게 하지 않기",
+      "message_1": "학용품으로 친구를 찌르거나 놀라게 하지 않기",
+      "message_2": "친구의 질문을 바보 같다고 말하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-05": {
+      "event": null,
+      "text": "1. 온라인 글을 올리기 전 친구가 불편하지 않을지 생각하기",
+      "display_text": "1. 온라인 글을 올리기 전 친구가 불편하지 않을지 생각하기",
+      "message_1": "온라인 글을 올리기 전 친구가 불편하지 않을지 생각하기",
+      "message_2": "청소한 곳을 일부러 어지럽히지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-06": {
+      "event": null,
+      "text": "1. 횡단보도 건널 때 주변 살피며 건너기",
+      "display_text": "1. 횡단보도 건널 때 주변 살피며 건너기",
+      "message_1": "횡단보도 건널 때 주변 살피며 건너기",
+      "message_2": "친구가 아끼는 물건을 장난감처럼 다루지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-09": {
+      "event": "소방의 날",
+      "text": "1. 소방의 날 : 안전 수칙을 다시 확인하고 침착하게 실천하기",
+      "display_text": "1. 소방의 날 : 안전 수칙을 다시 확인하고 침착하게 실천하기",
+      "message_1": "소방의 날 : 안전 수칙을 다시 확인하고 침착하게 실천하기",
+      "message_2": "다른 반 수업을 지나갈 때 조용히 이동하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-10": {
+      "event": null,
+      "text": "1. 비가 올 때는 밝은 옷 입기",
+      "display_text": "1. 비가 올 때는 밝은 옷 입기",
+      "message_1": "비가 올 때는 밝은 옷 입기",
+      "message_2": "학교 방송이 나오면 말소리를 줄이고 듣기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-11": {
+      "event": null,
+      "text": "1. 낯선 사람에게 개인정보 알려주지 않기",
+      "display_text": "1. 낯선 사람에게 개인정보 알려주지 않기",
+      "message_1": "낯선 사람에게 개인정보 알려주지 않기",
+      "message_2": "하루 한 번 주변 사람에게 다정한 말 건네기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-12": {
+      "event": null,
+      "text": "1. 낯선 사람이 아는 척해도 따라가지 않기",
+      "display_text": "1. 낯선 사람이 아는 척해도 따라가지 않기",
+      "message_1": "낯선 사람이 아는 척해도 따라가지 않기",
+      "message_2": "오늘 내가 잘한 행동 한 가지 떠올리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-13": {
+      "event": null,
+      "text": "1. 모르는 어른의 도움 요청 거절하기",
+      "display_text": "1. 모르는 어른의 도움 요청 거절하기",
+      "message_1": "모르는 어른의 도움 요청 거절하기",
+      "message_2": "어제보다 나아진 점을 작게라도 찾아보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-16": {
+      "event": "국제 관용의 날",
+      "text": "1. 국제 관용의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "display_text": "1. 국제 관용의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_1": "국제 관용의 날 : 오늘의 의미를 알고 바른 행동으로 실천하기",
+      "message_2": "어려운 일을 만나면 도움 받을 방법 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-17": {
+      "event": "순국선열의 날",
+      "text": "1. 순국선열의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "display_text": "1. 순국선열의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_1": "순국선열의 날 : 공동체를 위해 애쓴 분들을 기억하기",
+      "message_2": "내가 좋아하는 활동과 힘든 활동을 구분해 보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-18": {
+      "event": null,
+      "text": "1. 낯선 사람이 준 간식이나 음식 먹지 않기",
+      "display_text": "1. 낯선 사람이 준 간식이나 음식 먹지 않기",
+      "message_1": "낯선 사람이 준 간식이나 음식 먹지 않기",
+      "message_2": "실수한 일을 다음 행동으로 고쳐 보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-19": {
+      "event": null,
+      "text": "1. 집에 혼자 있을 때 문 열어주지 않기",
+      "display_text": "1. 집에 혼자 있을 때 문 열어주지 않기",
+      "message_1": "집에 혼자 있을 때 문 열어주지 않기",
+      "message_2": "새로운 도전을 하기 전 필요한 준비물 확인하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-20": {
+      "event": null,
+      "text": "1. 자동차 밖으로 손과 머리 내밀지 않기",
+      "display_text": "1. 자동차 밖으로 손과 머리 내밀지 않기",
+      "message_1": "자동차 밖으로 손과 머리 내밀지 않기",
+      "message_2": "친구와 비교하기보다 내 변화 살피기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-23": {
+      "event": null,
+      "text": "1. 개인 이동 장비를 탈 때 보호 장비 착용하기",
+      "display_text": "1. 개인 이동 장비를 탈 때 보호 장비 착용하기",
+      "message_1": "개인 이동 장비를 탈 때 보호 장비 착용하기",
+      "message_2": "칭찬받은 일을 다시 해볼 방법 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-24": {
+      "event": null,
+      "text": "1. 자동차 다니는 곳에서 공놀이하지 않기",
+      "display_text": "1. 자동차 다니는 곳에서 공놀이하지 않기",
+      "message_1": "자동차 다니는 곳에서 공놀이하지 않기",
+      "message_2": "마음이 복잡할 때 글이나 그림으로 표현하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-25": {
+      "event": null,
+      "text": "1. 친구의 몸과 마음 아프게 하지 않기",
+      "display_text": "1. 친구의 몸과 마음 아프게 하지 않기",
+      "message_1": "친구의 몸과 마음 아프게 하지 않기",
+      "message_2": "오늘 지킬 약속을 한 가지 정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-26": {
+      "event": null,
+      "text": "1. 친구를 함부로 밀기, 꼬집기, 때리지 않기",
+      "display_text": "1. 친구를 함부로 밀기, 꼬집기, 때리지 않기",
+      "message_1": "친구를 함부로 밀기, 꼬집기, 때리지 않기",
+      "message_2": "잘 안 되는 일도 한 번 더 시도해 보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-27": {
+      "event": null,
+      "text": "1. 친구의 몸을 함부로 보거나 만지지 않기",
+      "display_text": "1. 친구의 몸을 함부로 보거나 만지지 않기",
+      "message_1": "친구의 몸을 함부로 보거나 만지지 않기",
+      "message_2": "내가 도움을 줄 수 있는 일을 찾아보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-11-30": {
+      "event": null,
+      "text": "1. 친구의 몸과 얼굴 사진 찍어 공유하지 않기",
+      "display_text": "1. 친구의 몸과 얼굴 사진 찍어 공유하지 않기",
+      "message_1": "친구의 몸과 얼굴 사진 찍어 공유하지 않기",
+      "message_2": "몸과 마음이 보내는 신호를 알아차리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-01": {
+      "event": null,
+      "text": "1. 친구의 몸과 얼굴 함부로 평가하지 않기",
+      "display_text": "1. 친구의 몸과 얼굴 함부로 평가하지 않기",
+      "message_1": "친구의 몸과 얼굴 함부로 평가하지 않기",
+      "message_2": "하기 싫은 일도 필요한 이유를 생각해 보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-02": {
+      "event": null,
+      "text": "1. 친구의 입장에서 생각하며 말과 행동하기",
+      "display_text": "1. 친구의 입장에서 생각하며 말과 행동하기",
+      "message_1": "친구의 입장에서 생각하며 말과 행동하기",
+      "message_2": "내 장점을 친구에게 도움이 되는 방식으로 쓰기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-03": {
+      "event": null,
+      "text": "1. 욕을 하거나 기분 나쁜 말 사용하지 않기",
+      "display_text": "1. 욕을 하거나 기분 나쁜 말 사용하지 않기",
+      "message_1": "욕을 하거나 기분 나쁜 말 사용하지 않기",
+      "message_2": "수업 뒤 궁금한 점을 하나 남겨두기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-04": {
+      "event": null,
+      "text": "1. 욕을 담은 손동작, 기분 나쁜 몸짓하지 않기",
+      "display_text": "1. 욕을 담은 손동작, 기분 나쁜 몸짓하지 않기",
+      "message_1": "욕을 담은 손동작, 기분 나쁜 몸짓하지 않기",
+      "message_2": "하루 끝에 고마웠던 일을 한 가지 적기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-07": {
+      "event": null,
+      "text": "1. 상대를 존중하며 전화, 문자, 톡 하기",
+      "display_text": "1. 상대를 존중하며 전화, 문자, 톡 하기",
+      "message_1": "상대를 존중하며 전화, 문자, 톡 하기",
+      "message_2": "바쁜 날에는 가장 중요한 일부터 정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-08": {
+      "event": null,
+      "text": "1. 친구에 대한 잘못된 정보 퍼뜨리지 않기",
+      "display_text": "1. 친구에 대한 잘못된 정보 퍼뜨리지 않기",
+      "message_1": "친구에 대한 잘못된 정보 퍼뜨리지 않기",
+      "message_2": "작은 성공도 스스로 인정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-09": {
+      "event": null,
+      "text": "1. 친구의 가족에 대하여 함부로 말하지 않기",
+      "display_text": "1. 친구의 가족에 대하여 함부로 말하지 않기",
+      "message_1": "친구의 가족에 대하여 함부로 말하지 않기",
+      "message_2": "새로운 친구와 닮은 점 한 가지 찾아보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-10": {
+      "event": "세계 인권의 날",
+      "text": "1. 세계 인권의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "display_text": "1. 세계 인권의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_1": "세계 인권의 날 : 서로 다른 모습과 필요한 도움을 존중하기",
+      "message_2": "선택하기 어려울 때 기준을 세워 결정하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-11": {
+      "event": null,
+      "text": "1. 친구에게 돈을 빌려주거나 빌리지 않기",
+      "display_text": "1. 친구에게 돈을 빌려주거나 빌리지 않기",
+      "message_1": "친구에게 돈을 빌려주거나 빌리지 않기",
+      "message_2": "실패한 경험에서 다음 방법을 찾아보기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-14": {
+      "event": null,
+      "text": "1. 친구에게 간식이나 물건 사달라고 하지 않기",
+      "display_text": "1. 친구에게 간식이나 물건 사달라고 하지 않기",
+      "message_1": "친구에게 간식이나 물건 사달라고 하지 않기",
+      "message_2": "내 마음을 말할 수 있는 믿을 만한 사람 떠올리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-15": {
+      "event": null,
+      "text": "1. 장난으로 다른 사람의 물건 숨기지 않기",
+      "display_text": "1. 장난으로 다른 사람의 물건 숨기지 않기",
+      "message_1": "장난으로 다른 사람의 물건 숨기지 않기",
+      "message_2": "좋아하는 것을 친구와 나누는 방법 생각하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-16": {
+      "event": null,
+      "text": "1. 친구 물건 허락 없이 손대거나 가져가지 않기",
+      "display_text": "1. 친구 물건 허락 없이 손대거나 가져가지 않기",
+      "message_1": "친구 물건 허락 없이 손대거나 가져가지 않기",
+      "message_2": "오늘의 나에게 필요한 응원 한 문장 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-17": {
+      "event": null,
+      "text": "1. 내가 하기 싫은 것을 친구에게 강요하지 않기",
+      "display_text": "1. 내가 하기 싫은 것을 친구에게 강요하지 않기",
+      "message_1": "내가 하기 싫은 것을 친구에게 강요하지 않기",
+      "message_2": "내 몸은 소중하다는 것을 기억하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-18": {
+      "event": null,
+      "text": "1. 교실 안에서 뛰거나 장난치지 않기",
+      "display_text": "1. 교실 안에서 뛰거나 장난치지 않기",
+      "message_1": "교실 안에서 뛰거나 장난치지 않기",
+      "message_2": "불편한 접촉은 싫다고 말하고 바로 알리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-21": {
+      "event": null,
+      "text": "1. 교실에서 몸 장난이나 악 지르지 않기",
+      "display_text": "1. 교실에서 몸 장난이나 악 지르지 않기",
+      "message_1": "교실에서 몸 장난이나 악 지르지 않기",
+      "message_2": "친구의 몸을 장난으로 만지지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-22": {
+      "event": null,
+      "text": "1. 교실 바닥에 앉거나 누워서 장난치지 않기",
+      "display_text": "1. 교실 바닥에 앉거나 누워서 장난치지 않기",
+      "message_1": "교실 바닥에 앉거나 누워서 장난치지 않기",
+      "message_2": "사진을 찍기 전 상대의 허락을 받기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-23": {
+      "event": null,
+      "text": "1. 계단, 복도에서 뛰거나 장난치지 않기",
+      "display_text": "1. 계단, 복도에서 뛰거나 장난치지 않기",
+      "message_1": "계단, 복도에서 뛰거나 장난치지 않기",
+      "message_2": "친구가 불편해하면 미안하다고 말하고 멈추기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-24": {
+      "event": null,
+      "text": "1. 계단, 복도에서 우측 통행하기",
+      "display_text": "1. 계단, 복도에서 우측 통행하기",
+      "message_1": "계단, 복도에서 우측 통행하기",
+      "message_2": "비밀이라도 위험한 일은 어른에게 알리기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-25": {
+      "event": null,
+      "text": "1. 보이지 않는 모퉁이에서 조심해서 걷기",
+      "display_text": "1. 보이지 않는 모퉁이에서 조심해서 걷기",
+      "message_1": "보이지 않는 모퉁이에서 조심해서 걷기",
+      "message_2": "누군가 억지로 시키는 일은 거절하고 도움 요청하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-28": {
+      "event": null,
+      "text": "1. 계단 난간에서 장난치지 않기",
+      "display_text": "1. 계단 난간에서 장난치지 않기",
+      "message_1": "계단 난간에서 장난치지 않기",
+      "message_2": "혼자 해결하기 어려운 관계 문제는 선생님께 말하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-29": {
+      "event": null,
+      "text": "1. 복도나 창문 난간에 기대지 않기",
+      "display_text": "1. 복도나 창문 난간에 기대지 않기",
+      "message_1": "복도나 창문 난간에 기대지 않기",
+      "message_2": "친구를 웃기려고 다른 친구를 놀리지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-30": {
+      "event": null,
+      "text": "1. 책상과 사물함 위에 올라가지 않기",
+      "display_text": "1. 책상과 사물함 위에 올라가지 않기",
+      "message_1": "책상과 사물함 위에 올라가지 않기",
+      "message_2": "사람마다 안전하게 느끼는 거리가 다름을 존중하기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    },
+    "2026-12-31": {
+      "event": null,
+      "text": "1. 출입문이나 문 근처에서 장난치지 않기",
+      "display_text": "1. 출입문이나 문 근처에서 장난치지 않기",
+      "message_1": "출입문이나 문 근처에서 장난치지 않기",
+      "message_2": "상대가 원하지 않는 별명은 사용하지 않기",
+      "source": "rebuilt-from-hwp-and-official-education-sources-2026-09-03"
+    }
+  }
+}
