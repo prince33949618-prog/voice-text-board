@@ -1425,6 +1425,13 @@ function populateVoices() {
   updateVoiceGenderButtons();
 }
 
+function refreshVoicesAfterLoad() {
+  populateVoices();
+  [250, 800, 1800, 3500, 6000].forEach((delay) => {
+    window.setTimeout(populateVoices, delay);
+  });
+}
+
 function pickKoreanVoiceChoices(voices: SpeechSynthesisVoice[]) {
   const koreanVoices = voices.filter((voice) => voice.lang.toLowerCase().startsWith("ko"));
   const exactMale = pickBestVoiceByGender(koreanVoices, "male");
@@ -2217,11 +2224,11 @@ function scoreVoicePreference(voice: SpeechSynthesisVoice, gender: KoreanVoiceGe
   if (value.includes("google")) score += 38;
   if (!voice.localService) score += 30;
   if (gender === "female") {
-    if (/sunhi|sun hi|sun-hi|선희|서현|서연|유미|yumi|seohyeon|seo hyeon|seoyeon|seo yeon|jimin|ji min|yujin|yu jin|soonbok|soon bok|소연|민서|수진|지민|유진/i.test(value)) score += 95;
+    if (/sunhi|sun hi|sun-hi|선희|서현|서연|유미|yumi|yuna|seohyeon|seo hyeon|seoyeon|seo yeon|jimin|ji min|yujin|yu jin|soonbok|soon bok|소연|민서|수진|지민|유진|유나/i.test(value)) score += 95;
     if (/heami|haemi|혜미/i.test(value)) score -= 85;
     if (isClearlyMaleVoice(voice)) score -= 220;
   } else {
-    if (/injoon|in joon|bongjin|bong jin|gookmin|gook min|민준|준서|지훈|현우/i.test(value)) score += 90;
+    if (/injoon|in joon|bongjin|bong jin|gookmin|gook min|hyunsu|hyun su|doyoon|do yoon|seojun|seo jun|siwoo|si woo|minjun|min jun|민준|준서|지훈|현우|현수|도윤|서준|시우/i.test(value)) score += 90;
     if (isClearlyFemaleVoice(voice)) score -= 220;
   }
   return score;
@@ -2245,7 +2252,7 @@ function inferVoiceGender(voice: SpeechSynthesisVoice): KoreanVoiceGender | "unk
     "madina", "svetlana", "dariya", "sreymom", "yesui", "premwadee", "achara",
     "suthida", "gadis", "nanami", "aoi", "mayu", "ayumi", "haruka", "blessica",
     "seohyeon", "seo hyeon", "seoyeon", "seo yeon", "jimin", "ji min", "yujin",
-    "yu jin", "soonbok", "soon bok", "선희", "서현", "지민", "유진", "소연", "민서", "수진"
+    "yu jin", "soonbok", "soon bok", "yuna", "선희", "서현", "지민", "유진", "유나", "소연", "민서", "수진"
   ];
   const malePattern = [
     "male", "man", "남", "남성", "mark", "david", "george", "daniel", "alex", "fred",
@@ -2253,7 +2260,8 @@ function inferVoiceGender(voice: SpeechSynthesisVoice): KoreanVoiceGender | "unk
     "yunye", "yunfeng", "yunhao", "guy", "ryan", "brian", "christopher", "eric",
     "roger", "tony", "namminh", "nam minh", "sardor", "dmitry", "maxim", "piseth",
     "bataa", "niwat", "ardi", "keita", "ichiro", "naoki", "angelo", "bongjin",
-    "bong jin", "gookmin", "gook min", "준서", "지훈", "현우"
+    "bong jin", "gookmin", "gook min", "hyunsu", "hyun su", "doyoon", "do yoon",
+    "seojun", "seo jun", "siwoo", "si woo", "minjun", "min jun", "준서", "지훈", "현우", "현수", "도윤", "서준", "시우"
   ];
   if (femalePattern.some((token) => value.includes(token))) return "female";
   if (malePattern.some((token) => value.includes(token))) return "male";
@@ -2813,8 +2821,17 @@ function speakLines(text: string, lang: string, voice?: SpeechSynthesisVoice, hi
   readingLang = lang;
   readingVoiceURI = voice?.voiceURI ?? "";
   readingHighlightRoot = highlightRoot;
+  notifyVoiceGenderFallback(voice);
   setMode("reading");
   readNextLine(true);
+}
+
+function notifyVoiceGenderFallback(voice?: SpeechSynthesisVoice) {
+  if (!voice) return;
+  const inferred = inferVoiceGender(voice);
+  if (inferred === "unknown" || inferred === settings.koreanVoiceGender) return;
+  const language = readingLang.toLowerCase().startsWith("ko") ? "한국어" : "선택한 언어";
+  showToast(`${language} ${voiceGenderLabel(settings.koreanVoiceGender)} 음성이 없어 톤을 보정해 읽습니다.`);
 }
 
 function splitReadableLines(text: string, lang = "ko-KR") {
@@ -2921,12 +2938,12 @@ function getVoiceTuning(voice?: SpeechSynthesisVoice) {
   if (settings.koreanVoiceGender === "male") {
     return inferred === "male"
       ? { pitch: isKorean ? 0.96 : 0.94, rateMultiplier: 1 }
-      : { pitch: isKorean ? 0.78 : 0.82, rateMultiplier: 0.96 };
+      : { pitch: isKorean ? 0.55 : 0.65, rateMultiplier: 0.9 };
   }
   if (settings.koreanVoiceGender === "female") {
     return inferred === "female"
       ? { pitch: isKorean ? 0.98 : 1.02, rateMultiplier: isKorean ? 0.96 : 1 }
-      : { pitch: isKorean ? 1.12 : 1.14, rateMultiplier: 0.98 };
+      : { pitch: isKorean ? 1.22 : 1.18, rateMultiplier: 0.98 };
   }
   return { pitch: 1.02, rateMultiplier: 1 };
 }
@@ -3808,7 +3825,7 @@ window.addEventListener("beforeunload", () => {
 hydrate();
 bindEvents();
 applySettings();
-populateVoices();
+refreshVoicesAfterLoad();
 void checkTranslationSupport();
 loadActiveBoardContent();
 updateCounts();
