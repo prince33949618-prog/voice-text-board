@@ -312,6 +312,7 @@ let speechRawText = "";
 let translatedText = "";
 let translationStatus: TranslationStatus = "idle";
 let translationRequestId = 0;
+const geminiTranslationCache = new Map<string, string>();
 let readingLang = "ko-KR";
 let readingVoiceURI = "";
 let isRestartingSpeech = false;
@@ -1426,8 +1427,12 @@ function populateVoices() {
 
 function pickKoreanVoiceChoices(voices: SpeechSynthesisVoice[]) {
   const koreanVoices = voices.filter((voice) => voice.lang.toLowerCase().startsWith("ko"));
-  const male = pickBestVoiceByGender(koreanVoices, "male");
-  const female = pickBestVoiceByGender(koreanVoices, "female")
+  const exactMale = pickBestVoiceByGender(koreanVoices, "male");
+  const exactFemale = pickBestVoiceByGender(koreanVoices, "female");
+  const male = exactMale
+    ?? pickBestLikelyVoiceByGender(koreanVoices, "male", exactFemale);
+  const female = exactFemale
+    ?? pickBestLikelyVoiceByGender(koreanVoices, "female", male)
     ?? pickBestLikelyKoreanFemaleVoice(koreanVoices, male);
   return { male, female };
 }
@@ -1438,7 +1443,12 @@ function selectVoiceGender(gender: KoreanVoiceGender) {
   settings.voiceURI = voice?.voiceURI ?? "";
   persistSettingsChange(false);
   restartCurrentSpeech();
-  if (!voice) showToast(`${voiceGenderLabel(gender)} 한국어 목소리가 이 기기에 없어 기본 목소리로 읽습니다.`);
+  const inferred = voice ? inferVoiceGender(voice) : "unknown";
+  if (!voice) {
+    showToast(`${voiceGenderLabel(gender)} 한국어 목소리가 이 기기에 없어 기본 목소리로 읽습니다.`);
+  } else if (inferred !== gender) {
+    showToast(`이 기기에 확실한 ${voiceGenderLabel(gender)} 한국어 목소리가 없어 가장 가까운 목소리로 보정해 읽습니다.`);
+  }
 }
 
 function updateVoiceGenderButtons() {
@@ -1660,20 +1670,49 @@ async function getTranslator(code: LanguageCode) {
 async function translateWithGemini(sourceText: string, code: LanguageCode) {
   const items = getNumberedTranslationItems(sourceText);
   const sourceItems = items.length ? items : [sourceText];
+  const cacheKey = geminiTranslationCacheKey(sourceItems, code);
+  const cached = geminiTranslationCache.get(cacheKey);
+  if (cached) return cached;
+
   const prompt = buildTranslationPrompt(sourceItems, code, false);
-  const raw = await callGeminiText(prompt, 1500, 0.02);
+  const raw = await callGeminiText(prompt, 1300, 0.02);
   let translatedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(raw), code);
   if (!isAcceptableTranslationResult(sourceItems, translatedItems, code)) {
-    const retryPrompt = buildTranslationPrompt(sourceItems, code, true);
-    const retryRaw = await callGeminiText(retryPrompt, 1800, 0);
-    translatedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(retryRaw), code);
-  }
-  if (!isAcceptableTranslationResult(sourceItems, translatedItems, code)) {
     const repairPrompt = buildTranslationRepairPrompt(sourceItems, translatedItems, code);
-    const repairRaw = await callGeminiText(repairPrompt, 1800, 0);
-    translatedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(repairRaw), code);
+    const repairRaw = await callGeminiText(repairPrompt, 1400, 0);
+    const repairedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(repairRaw), code);
+    if (isAcceptableTranslationResult(sourceItems, repairedItems, code) || isSaferTranslationCandidate(sourceItems, repairedItems, translatedItems, code)) {
+      translatedItems = repairedItems;
+    }
   }
-  return translatedItems.join("\n");
+  const finalText = translatedItems.join("\n");
+  geminiTranslationCache.set(cacheKey, finalText);
+  if (geminiTranslationCache.size > 80) {
+    const oldestKey = geminiTranslationCache.keys().next().value;
+    if (oldestKey) geminiTranslationCache.delete(oldestKey);
+  }
+  return finalText;
+}
+
+function geminiTranslationCacheKey(sourceItems: string[], code: LanguageCode) {
+  return [settings.geminiModel, code, sourceItems.join("\n")].join("\u001f");
+}
+
+function isSaferTranslationCandidate(sourceItems: string[], candidate: string[], previous: string[], code: LanguageCode) {
+  const candidateCritical = countCriticalTranslationIssues(sourceItems, candidate, code);
+  const previousCritical = countCriticalTranslationIssues(sourceItems, previous, code);
+  return candidateCritical < previousCritical;
+}
+
+function countCriticalTranslationIssues(sourceItems: string[], translatedItems: string[], code: LanguageCode) {
+  let count = Math.abs(sourceItems.length - translatedItems.length) * 3;
+  translatedItems.forEach((item) => {
+    const translated = stripNoticeNumber(item);
+    if (!translated) count += 3;
+    if (/Let's refine|Here(?:'s| is)|번역\s*:|Translation\s*:/i.test(translated)) count += 2;
+    if (hasWrongLanguageLeakage(translated, code)) count += 3;
+  });
+  return count;
 }
 
 function buildTranslationPrompt(items: string[], code: LanguageCode, strictRetry: boolean) {
@@ -2121,9 +2160,16 @@ function readTranslatedText(code: LanguageCode) {
 function pickVoiceForLanguage(code: LanguageCode) {
   const voices = window.speechSynthesis?.getVoices?.() ?? [];
   if (code === "ko") {
+    const koreanVoices = voices.filter((voice) => voice.lang.toLowerCase().startsWith("ko"));
     const koreanChoices = pickKoreanVoiceChoices(voices);
+    const selectedVoice = koreanVoices.find((voice) => voice.voiceURI === settings.voiceURI);
+    const selectedVoiceMatchesGender = selectedVoice && inferVoiceGender(selectedVoice) === settings.koreanVoiceGender
+      ? selectedVoice
+      : undefined;
     return (settings.koreanVoiceGender === "male" ? koreanChoices.male : koreanChoices.female)
-      ?? voices.find((voice) => voice.voiceURI === settings.voiceURI);
+      ?? selectedVoiceMatchesGender
+      ?? pickBestLikelyVoiceByGender(koreanVoices, settings.koreanVoiceGender)
+      ?? koreanVoices[0];
   }
   const language = languages.find((item) => item.code === code);
   const preferred = language?.speechCode.toLowerCase() ?? "";
@@ -2132,6 +2178,7 @@ function pickVoiceForLanguage(code: LanguageCode) {
     voice.lang.toLowerCase() === preferred || voice.lang.toLowerCase().startsWith(prefix)
   );
   return pickVoiceByGender(languageVoices, settings.koreanVoiceGender)
+    ?? pickBestLikelyVoiceByGender(languageVoices, settings.koreanVoiceGender)
     ?? languageVoices[0];
 }
 
@@ -2150,6 +2197,14 @@ function pickBestLikelyKoreanFemaleVoice(voices: SpeechSynthesisVoice[], male?: 
     .filter((voice) => voice.voiceURI !== male?.voiceURI)
     .filter((voice) => !isClearlyMaleVoice(voice))
     .sort((a, b) => scoreVoicePreference(b, "female") - scoreVoicePreference(a, "female"))[0];
+}
+
+function pickBestLikelyVoiceByGender(voices: SpeechSynthesisVoice[], gender: KoreanVoiceGender, opposite?: SpeechSynthesisVoice) {
+  const oppositeGender: KoreanVoiceGender = gender === "male" ? "female" : "male";
+  return voices
+    .filter((voice) => voice.voiceURI !== opposite?.voiceURI)
+    .filter((voice) => inferVoiceGender(voice) !== oppositeGender)
+    .sort((a, b) => scoreVoicePreference(b, gender) - scoreVoicePreference(a, gender))[0];
 }
 
 function scoreVoicePreference(voice: SpeechSynthesisVoice, gender: KoreanVoiceGender) {
@@ -2862,8 +2917,16 @@ function getSpeechRate() {
 function getVoiceTuning(voice?: SpeechSynthesisVoice) {
   const value = voice ? `${voice.name} ${voice.voiceURI} ${voice.lang}`.toLowerCase() : "";
   const isKorean = readingLang.toLowerCase().startsWith("ko") || value.includes("ko-");
-  if (isKorean && settings.koreanVoiceGender === "female") {
-    return { pitch: 0.92, rateMultiplier: 0.94 };
+  const inferred = voice ? inferVoiceGender(voice) : "unknown";
+  if (settings.koreanVoiceGender === "male") {
+    return inferred === "male"
+      ? { pitch: isKorean ? 0.96 : 0.94, rateMultiplier: 1 }
+      : { pitch: isKorean ? 0.78 : 0.82, rateMultiplier: 0.96 };
+  }
+  if (settings.koreanVoiceGender === "female") {
+    return inferred === "female"
+      ? { pitch: isKorean ? 0.98 : 1.02, rateMultiplier: isKorean ? 0.96 : 1 }
+      : { pitch: isKorean ? 1.12 : 1.14, rateMultiplier: 0.98 };
   }
   return { pitch: 1.02, rateMultiplier: 1 };
 }
