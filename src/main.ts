@@ -2158,7 +2158,7 @@ function readTranslatedText(code: LanguageCode) {
   const language = languages.find((item) => item.code === code);
   const voice = pickVoiceForLanguage(code);
   if (code !== "ko" && !voice) {
-    showToast(`${languageLabel(code)} 목소리가 이 기기에 없어 번역문만 표시합니다.`);
+    showToast(`${languageLabel(code)} ${voiceGenderLabel(settings.koreanVoiceGender)} 음성이 이 기기에 없어 번역문만 표시합니다.`);
     return;
   }
   speakLines(translatedText, language?.speechCode ?? "ko-KR", voice, translationResultText);
@@ -2175,8 +2175,7 @@ function pickVoiceForLanguage(code: LanguageCode) {
       : undefined;
     return (settings.koreanVoiceGender === "male" ? koreanChoices.male : koreanChoices.female)
       ?? selectedVoiceMatchesGender
-      ?? pickBestLikelyVoiceByGender(koreanVoices, settings.koreanVoiceGender)
-      ?? koreanVoices[0];
+      ?? pickBestLikelyVoiceByGender(koreanVoices, settings.koreanVoiceGender);
   }
   const language = languages.find((item) => item.code === code);
   const preferred = language?.speechCode.toLowerCase() ?? "";
@@ -2185,8 +2184,7 @@ function pickVoiceForLanguage(code: LanguageCode) {
     voice.lang.toLowerCase() === preferred || voice.lang.toLowerCase().startsWith(prefix)
   );
   return pickVoiceByGender(languageVoices, settings.koreanVoiceGender)
-    ?? pickBestLikelyVoiceByGender(languageVoices, settings.koreanVoiceGender)
-    ?? languageVoices[0];
+    ?? pickBestLikelyVoiceByGender(languageVoices, settings.koreanVoiceGender);
 }
 
 function pickVoiceByGender(voices: SpeechSynthesisVoice[], gender: KoreanVoiceGender) {
@@ -2800,6 +2798,10 @@ function startReading(text: string) {
     return;
   }
   const voice = pickVoiceForLanguage("ko");
+  if (!voice) {
+    showToast(`${voiceGenderLabel(settings.koreanVoiceGender)} 한국어 음성이 이 기기/브라우저에 없습니다.`);
+    return;
+  }
   speakLines(text, "ko-KR", voice, editor);
 }
 
