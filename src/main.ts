@@ -2175,7 +2175,8 @@ function pickVoiceForLanguage(code: LanguageCode) {
       : undefined;
     return (settings.koreanVoiceGender === "male" ? koreanChoices.male : koreanChoices.female)
       ?? selectedVoiceMatchesGender
-      ?? pickBestLikelyVoiceByGender(koreanVoices, settings.koreanVoiceGender);
+      ?? pickBestLikelyVoiceByGender(koreanVoices, settings.koreanVoiceGender)
+      ?? pickAnyReadableVoice(koreanVoices);
   }
   const language = languages.find((item) => item.code === code);
   const preferred = language?.speechCode.toLowerCase() ?? "";
@@ -2184,7 +2185,14 @@ function pickVoiceForLanguage(code: LanguageCode) {
     voice.lang.toLowerCase() === preferred || voice.lang.toLowerCase().startsWith(prefix)
   );
   return pickVoiceByGender(languageVoices, settings.koreanVoiceGender)
-    ?? pickBestLikelyVoiceByGender(languageVoices, settings.koreanVoiceGender);
+    ?? pickBestLikelyVoiceByGender(languageVoices, settings.koreanVoiceGender)
+    ?? pickAnyReadableVoice(languageVoices);
+}
+
+function pickAnyReadableVoice(voices: SpeechSynthesisVoice[]) {
+  return voices
+    .slice()
+    .sort((a, b) => scoreGenericVoicePreference(b) - scoreGenericVoicePreference(a))[0];
 }
 
 function pickVoiceByGender(voices: SpeechSynthesisVoice[], gender: KoreanVoiceGender) {
@@ -2212,7 +2220,7 @@ function pickBestLikelyVoiceByGender(voices: SpeechSynthesisVoice[], gender: Kor
     .sort((a, b) => scoreVoicePreference(b, gender) - scoreVoicePreference(a, gender))[0];
 }
 
-function scoreVoicePreference(voice: SpeechSynthesisVoice, gender: KoreanVoiceGender) {
+function scoreGenericVoicePreference(voice: SpeechSynthesisVoice) {
   const value = `${voice.name} ${voice.voiceURI} ${voice.lang}`.toLowerCase();
   let score = 0;
   if (value.includes("natural")) score += 110;
@@ -2221,6 +2229,12 @@ function scoreVoicePreference(voice: SpeechSynthesisVoice, gender: KoreanVoiceGe
   if (value.includes("microsoft")) score += 42;
   if (value.includes("google")) score += 38;
   if (!voice.localService) score += 30;
+  return score;
+}
+
+function scoreVoicePreference(voice: SpeechSynthesisVoice, gender: KoreanVoiceGender) {
+  const value = `${voice.name} ${voice.voiceURI} ${voice.lang}`.toLowerCase();
+  let score = scoreGenericVoicePreference(voice);
   if (gender === "female") {
     if (/sunhi|sun hi|sun-hi|선희|서현|서연|유미|yumi|yuna|seohyeon|seo hyeon|seoyeon|seo yeon|jimin|ji min|yujin|yu jin|soonbok|soon bok|소연|민서|수진|지민|유진|유나/i.test(value)) score += 95;
     if (/heami|haemi|혜미/i.test(value)) score -= 85;
@@ -2831,9 +2845,9 @@ function speakLines(text: string, lang: string, voice?: SpeechSynthesisVoice, hi
 function notifyVoiceGenderFallback(voice?: SpeechSynthesisVoice) {
   if (!voice) return;
   const inferred = inferVoiceGender(voice);
-  if (inferred === "unknown" || inferred === settings.koreanVoiceGender) return;
+  if (inferred === settings.koreanVoiceGender) return;
   const language = readingLang.toLowerCase().startsWith("ko") ? "한국어" : "선택한 언어";
-  showToast(`${language} ${voiceGenderLabel(settings.koreanVoiceGender)} 음성이 없어 톤을 보정해 읽습니다.`);
+  showToast(`${language} ${voiceGenderLabel(settings.koreanVoiceGender)} 음성이 없어 낮은 톤으로 대체 읽습니다.`);
 }
 
 function splitReadableLines(text: string, lang = "ko-KR") {
