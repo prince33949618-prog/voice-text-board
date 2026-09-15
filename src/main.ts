@@ -2110,7 +2110,9 @@ function knownTranslationOverride(source: string, code: LanguageCode) {
 
 function cleanTranslationMetaText(text: string) {
   return text
-    .replace(/^\s*[-*]\s*/gm, "")
+    .replace(/^\s*[:：]?\s*[-*•]+\s*["'“”‘’]?\s*/gm, "")
+    .replace(/^\s*[:：]\s*["'“”‘’]?\s*/gm, "")
+    .replace(/^["'“”‘’]+|["'“”‘’]+$/g, "")
     .replace(/^Let's\s+refine.*$/gim, "")
     .replace(/^Here(?:'s| is).*$/gim, "")
     .replace(/^Translation\s*:?\s*$/gim, "")
@@ -2135,9 +2137,9 @@ function normalizeTranslatedLineBreaks(text: string) {
 }
 
 function formatTranslationForDisplay(text: string) {
-  return normalizeTranslatedLineBreaks(text)
+  return normalizeTranslatedLineBreaks(cleanTranslationMetaText(text))
     .split("\n")
-    .map((line) => line.trim())
+    .map((line) => cleanTranslationMetaText(line).trim())
     .filter(Boolean)
     .join("\n");
 }
