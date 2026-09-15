@@ -2193,6 +2193,9 @@ function cleanTranslationMetaText(text: string) {
   return text
     .replace(/^\s*[:：]?\s*[-*•]+\s*["'“”‘’]?\s*/gm, "")
     .replace(/^\s*[:：]\s*["'“”‘’]?\s*/gm, "")
+    .replace(/^\s*[:：;；]+\s*["'“”‘’]?\s*/gm, "")
+    .replace(/^\s*["'“”‘’]+\s*/gm, "")
+    .replace(/\s*["'“”‘’]+\s*$/gm, "")
     .replace(/^["'“”‘’]+|["'“”‘’]+$/g, "")
     .replace(/^Let's\s+refine.*$/gim, "")
     .replace(/^Here(?:'s| is).*$/gim, "")
@@ -2259,7 +2262,7 @@ function pickVoiceForLanguage(code: LanguageCode) {
     return (settings.koreanVoiceGender === "male" ? koreanChoices.male : koreanChoices.female)
       ?? selectedVoiceMatchesGender
       ?? pickBestLikelyVoiceByGender(koreanVoices, settings.koreanVoiceGender)
-      ?? pickAnyReadableVoice(koreanVoices);
+      ?? pickAnyReadableVoice(koreanVoices, settings.koreanVoiceGender);
   }
   const language = languages.find((item) => item.code === code);
   const preferred = language?.speechCode.toLowerCase() ?? "";
@@ -2269,11 +2272,15 @@ function pickVoiceForLanguage(code: LanguageCode) {
   );
   return pickVoiceByGender(languageVoices, settings.koreanVoiceGender)
     ?? pickBestLikelyVoiceByGender(languageVoices, settings.koreanVoiceGender)
-    ?? pickAnyReadableVoice(languageVoices);
+    ?? pickAnyReadableVoice(languageVoices, settings.koreanVoiceGender);
 }
 
-function pickAnyReadableVoice(voices: SpeechSynthesisVoice[]) {
-  return voices
+function pickAnyReadableVoice(voices: SpeechSynthesisVoice[], requestedGender?: KoreanVoiceGender) {
+  const oppositeGender = requestedGender === "male" ? "female" : requestedGender === "female" ? "male" : undefined;
+  const safeVoices = oppositeGender
+    ? voices.filter((voice) => inferVoiceGender(voice) !== oppositeGender)
+    : voices;
+  return safeVoices
     .slice()
     .sort((a, b) => scoreGenericVoicePreference(b) - scoreGenericVoicePreference(a))[0];
 }

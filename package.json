@@ -7,6 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "tsc && vite build",
     "preview": "vite preview --host 127.0.0.1",
+    "audit:multilingual": "node tools/audit-multilingual-contract.mjs",
     "tauri": "tauri"
   },
   "devDependencies": {
