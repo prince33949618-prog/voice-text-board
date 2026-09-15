@@ -2157,10 +2157,6 @@ function readTranslatedText(code: LanguageCode) {
   if (!translatedText) return;
   const language = languages.find((item) => item.code === code);
   const voice = pickVoiceForLanguage(code);
-  if (code !== "ko" && !voice) {
-    showToast(`${languageLabel(code)} ${voiceGenderLabel(settings.koreanVoiceGender)} 음성이 이 기기에 없어 번역문만 표시합니다.`);
-    return;
-  }
   speakLines(translatedText, language?.speechCode ?? "ko-KR", voice, translationResultText);
 }
 
@@ -2812,10 +2808,6 @@ function startReading(text: string) {
     return;
   }
   const voice = pickVoiceForLanguage("ko");
-  if (!voice) {
-    showToast(`${voiceGenderLabel(settings.koreanVoiceGender)} 한국어 음성이 이 기기/브라우저에 없습니다.`);
-    return;
-  }
   speakLines(text, "ko-KR", voice, editor);
 }
 
@@ -2843,7 +2835,10 @@ function speakLines(text: string, lang: string, voice?: SpeechSynthesisVoice, hi
 }
 
 function notifyVoiceGenderFallback(voice?: SpeechSynthesisVoice) {
-  if (!voice) return;
+  if (!voice) {
+    showToast("기기 기본 음성으로 읽습니다. 남/여 선택은 가능한 경우에만 적용됩니다.");
+    return;
+  }
   const inferred = inferVoiceGender(voice);
   if (inferred === settings.koreanVoiceGender) return;
   const language = readingLang.toLowerCase().startsWith("ko") ? "한국어" : "선택한 언어";
