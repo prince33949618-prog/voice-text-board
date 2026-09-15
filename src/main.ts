@@ -1684,12 +1684,20 @@ async function translateWithGemini(sourceText: string, code: LanguageCode) {
   const prompt = buildTranslationPrompt(sourceItems, code, false);
   const raw = await callGeminiText(prompt, 1000, 0.02);
   let translatedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(raw), code);
-  if (hasCriticalTranslationIssues(sourceItems, translatedItems, code)) {
+  if (!isAcceptableTranslationResult(sourceItems, translatedItems, code)) {
     const repairPrompt = buildTranslationRepairPrompt(sourceItems, translatedItems, code);
     const repairRaw = await callGeminiText(repairPrompt, 1100, 0);
     const repairedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(repairRaw), code);
-    if (!hasCriticalTranslationIssues(sourceItems, repairedItems, code) || isSaferTranslationCandidate(sourceItems, repairedItems, translatedItems, code)) {
+    if (isAcceptableTranslationResult(sourceItems, repairedItems, code) || isSaferTranslationCandidate(sourceItems, repairedItems, translatedItems, code)) {
       translatedItems = repairedItems;
+    }
+  }
+  if (hasCriticalTranslationIssues(sourceItems, translatedItems, code)) {
+    const strictPrompt = buildTranslationPrompt(sourceItems, code, true);
+    const strictRaw = await callGeminiText(strictPrompt, 1200, 0);
+    const strictItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(strictRaw), code);
+    if (!hasCriticalTranslationIssues(sourceItems, strictItems, code) || isSaferTranslationCandidate(sourceItems, strictItems, translatedItems, code)) {
+      translatedItems = strictItems;
     }
   }
   const finalText = translatedItems.join("\n");
@@ -1720,7 +1728,7 @@ function countCriticalTranslationIssues(sourceItems: string[], translatedItems: 
   translatedItems.forEach((item) => {
     const translated = stripNoticeNumber(item);
     if (!translated) count += 3;
-    if (/Let's refine|Here(?:'s| is)|번역\s*:|Translation\s*:/i.test(translated)) count += 2;
+    if (hasTranslationMetaLeakage(translated)) count += 3;
     if (hasWrongLanguageLeakage(translated, code)) count += 3;
   });
   return count;
@@ -1746,8 +1754,9 @@ function buildTranslationPrompt(items: string[], code: LanguageCode, strictRetry
     "11. '네임펜'은 permanent marker처럼 교실 활동에 맞는 표현으로 번역합니다.",
     "12. 기념일 이름은 가능한 공식·통용 명칭을 쓰고, 뒤의 실천 문구는 원문의 실천 행동을 그대로 옮깁니다.",
     "13. 설명, 인사말, 마크다운, 별표, 코드블록을 절대 쓰지 않습니다.",
-    "14. 반드시 입력 배열과 같은 개수의 JSON 배열 하나만 출력합니다. 예: [\"1. 번역\", \"2. 번역\"]",
-    strictRetry ? "15. 이전 응답은 의미 누락, 문법 오류, 번역투, 언어 혼입 가능성이 있습니다. 이번에는 원어민 교정까지 마친 완성 번역만 출력합니다." : "",
+    "14. 'Natural classroom rule', 'classroom rule', 'translation', 'refined', 'meaning' 같은 영어 라벨이나 해설을 절대 붙이지 않습니다.",
+    "15. 반드시 입력 배열과 같은 개수의 JSON 배열 하나만 출력합니다. 예: [\"1. 번역\", \"2. 번역\"]",
+    strictRetry ? "16. 이전 응답은 의미 누락, 문법 오류, 번역투, 언어 혼입 가능성이 있습니다. 이번에는 원어민 교정까지 마친 완성 번역만 출력합니다." : "",
     "용어 기준:",
     "- 국제 평화의 날: International Day of Peace / 国际和平日 / Ngày Quốc tế Hòa bình",
     "- 사회복지의 날: Social Welfare Day / 社会福利日 / Ngày Phúc lợi xã hội / Нийгмийн халамжийн өдөр",
@@ -1770,6 +1779,7 @@ function buildTranslationRepairPrompt(sourceItems: string[], draftItems: string[
     "- 원문의 장소, 대상, 시간, 행동, 이유를 빠뜨리지 않습니다.",
     "- 목표 언어 원어민이 교실에서 실제로 쓰는 자연스러운 표현으로 고칩니다.",
     "- 한국어, 영어 설명, 마크다운, 주석을 섞지 않습니다.",
+    "- 'Natural classroom rule', 'classroom rule', 'translation' 같은 영어 라벨을 모두 제거합니다.",
     "- 반드시 JSON 배열 하나만 출력합니다.",
     ...targetLanguageRules(code),
     "",
@@ -2005,7 +2015,7 @@ function isAcceptableTranslationResult(sourceItems: string[], translatedItems: s
     const source = stripNoticeNumber(sourceItems[index] ?? "");
     const translated = stripNoticeNumber(item);
     if (!translated) return false;
-    if (/Let's refine|Here(?:'s| is)|번역\s*:|Translation\s*:/i.test(translated)) return false;
+    if (hasTranslationMetaLeakage(translated)) return false;
     if (hasWrongLanguageLeakage(translated, code)) return false;
     if (source.length >= 24 && translated.length < 14) return false;
     if (/교실\s*규칙|우리\s*약속/.test(source) && !hasSharedAgreementMeaning(translated)) return false;
@@ -2016,11 +2026,15 @@ function isAcceptableTranslationResult(sourceItems: string[], translatedItems: s
   });
 }
 
+function hasTranslationMetaLeakage(text: string) {
+  return /\b(?:let'?s\s+refine|here(?:'s| is)|translation|translate|translated|korean|english|natural\s+classroom\s+rule|classroom\s+rule|meaning|refined|final\s+answer)\b|번역\s*:|해석\s*:/i.test(text);
+}
+
 function hasWrongLanguageLeakage(text: string, code: LanguageCode) {
   const withoutNumbers = text.replace(/^\s*\d{1,2}\.\s*/, "").trim();
   if (code !== "ko" && /[가-힣]/.test(withoutNumbers)) return true;
   if (/[{}[\]`*_#]/.test(withoutNumbers)) return true;
-  if (code !== "en" && /\b(?:translation|translate|here is|let's|refine|korean|english)\b/i.test(withoutNumbers)) return true;
+  if (code !== "en" && hasTranslationMetaLeakage(withoutNumbers)) return true;
   const latinLetterCount = (withoutNumbers.match(/[A-Za-z]/g) ?? []).length;
   const totalLetterCount = (withoutNumbers.match(/\p{L}/gu) ?? []).length || withoutNumbers.length;
   if (["zh", "ru", "km", "mn", "th", "ne", "my", "ja"].includes(code) && latinLetterCount / Math.max(totalLetterCount, 1) > 0.35) {
@@ -2104,6 +2118,30 @@ function knownTranslationOverride(source: string, code: LanguageCode) {
       mn: "Найзууддаа амласан зүйлээ марталгүй биелүүлэх."
     };
     return promiseTranslations[code];
+  }
+  if (/물건.*친구.*건넬.*던지지.*직접\s*주기|친구.*물건.*던지지.*직접\s*주기/.test(normalized)) {
+    const handItemTranslations: Partial<Record<LanguageCode, string>> = {
+      en: "Hand things directly to friends instead of throwing them.",
+      zh: "把物品递给朋友时，不要扔过去，要亲手递给他。",
+      vi: "Khi đưa đồ cho bạn, không ném mà hãy đưa tận tay.",
+      mn: "Найздаа эд зүйл өгөхдөө шидэхгүй, гараас гарт нь өгөх.",
+      uz: "Do‘stingizga buyum berayotganda uni otmasdan, qo‘lma-qo‘l bering.",
+      ru: "Передавая вещь другу, не бросайте ее, а отдавайте прямо в руки.",
+      ja: "友だちに物を渡すときは投げずに、手渡しする。"
+    };
+    return handItemTranslations[code];
+  }
+  if (/도서관.*책\s*읽는\s*친구.*방해하지\s*않기|책\s*읽는\s*친구.*도서관.*방해하지\s*않기/.test(normalized)) {
+    const libraryTranslations: Partial<Record<LanguageCode, string>> = {
+      en: "In the library, do not disturb friends who are reading.",
+      zh: "在图书馆里，不要打扰正在看书的朋友。",
+      vi: "Trong thư viện, không làm phiền bạn đang đọc sách.",
+      mn: "Номын санд ном уншиж байгаа найздаа саад хийхгүй байх.",
+      uz: "Kutubxonada kitob o‘qiyotgan do‘stlaringizga xalaqit bermang.",
+      ru: "В библиотеке не мешайте друзьям, которые читают книги.",
+      ja: "図書館では、本を読んでいる友だちのじゃまをしない。"
+    };
+    return libraryTranslations[code];
   }
   return "";
 }
