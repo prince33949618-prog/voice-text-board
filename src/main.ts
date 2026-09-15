@@ -1682,13 +1682,13 @@ async function translateWithGemini(sourceText: string, code: LanguageCode) {
   if (cached) return cached;
 
   const prompt = buildTranslationPrompt(sourceItems, code, false);
-  const raw = await callGeminiText(prompt, 1300, 0.02);
+  const raw = await callGeminiText(prompt, 1000, 0.02);
   let translatedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(raw), code);
-  if (!isAcceptableTranslationResult(sourceItems, translatedItems, code)) {
+  if (hasCriticalTranslationIssues(sourceItems, translatedItems, code)) {
     const repairPrompt = buildTranslationRepairPrompt(sourceItems, translatedItems, code);
-    const repairRaw = await callGeminiText(repairPrompt, 1400, 0);
+    const repairRaw = await callGeminiText(repairPrompt, 1100, 0);
     const repairedItems = applyKnownTranslationOverrides(sourceItems, parseGeminiTranslationItems(repairRaw), code);
-    if (isAcceptableTranslationResult(sourceItems, repairedItems, code) || isSaferTranslationCandidate(sourceItems, repairedItems, translatedItems, code)) {
+    if (!hasCriticalTranslationIssues(sourceItems, repairedItems, code) || isSaferTranslationCandidate(sourceItems, repairedItems, translatedItems, code)) {
       translatedItems = repairedItems;
     }
   }
@@ -1709,6 +1709,10 @@ function isSaferTranslationCandidate(sourceItems: string[], candidate: string[],
   const candidateCritical = countCriticalTranslationIssues(sourceItems, candidate, code);
   const previousCritical = countCriticalTranslationIssues(sourceItems, previous, code);
   return candidateCritical < previousCritical;
+}
+
+function hasCriticalTranslationIssues(sourceItems: string[], translatedItems: string[], code: LanguageCode) {
+  return countCriticalTranslationIssues(sourceItems, translatedItems, code) > 0;
 }
 
 function countCriticalTranslationIssues(sourceItems: string[], translatedItems: string[], code: LanguageCode) {
