@@ -2921,9 +2921,10 @@ function readNextLine(advance = true) {
   }
   highlightLine(readingLines[currentLineIndex]);
   const voice = getReadingVoice();
-  const utterance = new SpeechSynthesisUtterance(readingLines[currentLineIndex]);
+  const speechLang = voice?.lang || readingLang;
+  const utterance = new SpeechSynthesisUtterance(prepareLineForSpeech(readingLines[currentLineIndex], speechLang));
   if (voice) utterance.voice = voice;
-  utterance.lang = voice?.lang || readingLang;
+  utterance.lang = speechLang;
   const tuning = getVoiceTuning(voice);
   utterance.rate = getSpeechRate() * tuning.rateMultiplier;
   utterance.pitch = tuning.pitch;
@@ -2940,6 +2941,13 @@ function readNextLine(advance = true) {
   };
   window.speechSynthesis.speak(utterance);
   setMode("reading");
+}
+
+function prepareLineForSpeech(line: string, lang: string) {
+  if (!lang.toLowerCase().startsWith("ko")) return line;
+  return line
+    .replace(/^\s*(\d{1,2})\.\s*/g, (_, value: string) => `${value}번. `)
+    .replace(/\s+(\d{1,2})\.\s+/g, (_, value: string) => ` ${value}번. `);
 }
 
 function getSpeechRate() {
