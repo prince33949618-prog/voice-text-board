@@ -24,9 +24,8 @@ for (const code of nonLatinLanguages) {
 
 assert(mainSource.includes("hasTranslationMetaLeakage"), "번역 해설 혼입 검증 누락");
 assert(mainSource.includes("assertDisplayableTranslation"), "표시 전 번역 검증 누락");
-assert(mainSource.includes("pickAnyReadableVoice(koreanVoices, settings.koreanVoiceGender)"), "한국어 음성 성별 안전 fallback 누락");
-assert(mainSource.includes("pickAnyReadableVoice(languageVoices, settings.koreanVoiceGender)"), "외국어 음성 성별 안전 fallback 누락");
-assert(!/pickAnyReadableVoice\((?:koreanVoices|languageVoices)\)\s*;/.test(mainSource), "반대 성별로 떨어질 수 있는 음성 fallback 잔존");
+assert(mainSource.includes("inferredGender !== settings.koreanVoiceGender"), "음성 성별 잠금 검증 누락");
+assert(!/\?\?\s*pickAnyReadableVoice\((?:koreanVoices|languageVoices)/.test(mainSource), "반대 성별로 떨어질 수 있는 음성 fallback 잔존");
 
 assert(apiSource.includes("body.apiKey"), "사용자 API 키 입력 경로 누락");
 assert(!apiSource.includes("process.env.GEMINI_API_KEY"), "서버에 공유 API 키 fallback이 남아 있음");

@@ -2261,8 +2261,7 @@ function pickVoiceForLanguage(code: LanguageCode) {
       : undefined;
     return (settings.koreanVoiceGender === "male" ? koreanChoices.male : koreanChoices.female)
       ?? selectedVoiceMatchesGender
-      ?? pickBestLikelyVoiceByGender(koreanVoices, settings.koreanVoiceGender)
-      ?? pickAnyReadableVoice(koreanVoices, settings.koreanVoiceGender);
+      ?? pickBestVoiceByGender(koreanVoices, settings.koreanVoiceGender);
   }
   const language = languages.find((item) => item.code === code);
   const preferred = language?.speechCode.toLowerCase() ?? "";
@@ -2270,9 +2269,7 @@ function pickVoiceForLanguage(code: LanguageCode) {
   const languageVoices = voices.filter((voice) =>
     voice.lang.toLowerCase() === preferred || voice.lang.toLowerCase().startsWith(prefix)
   );
-  return pickVoiceByGender(languageVoices, settings.koreanVoiceGender)
-    ?? pickBestLikelyVoiceByGender(languageVoices, settings.koreanVoiceGender)
-    ?? pickAnyReadableVoice(languageVoices, settings.koreanVoiceGender);
+  return pickVoiceByGender(languageVoices, settings.koreanVoiceGender);
 }
 
 function pickAnyReadableVoice(voices: SpeechSynthesisVoice[], requestedGender?: KoreanVoiceGender) {
@@ -2913,6 +2910,13 @@ function speakLines(text: string, lang: string, voice?: SpeechSynthesisVoice, hi
   }
   if (!("speechSynthesis" in window)) {
     showToast("사용 가능한 읽기 음성을 찾지 못했습니다.");
+    return;
+  }
+  const inferredGender = voice ? inferVoiceGender(voice) : "unknown";
+  if (!voice || inferredGender !== settings.koreanVoiceGender) {
+    const language = lang.toLowerCase().startsWith("ko") ? "한국어" : "선택한 언어";
+    showToast(`${language} ${voiceGenderLabel(settings.koreanVoiceGender)} 음성을 이 기기에서 확인할 수 없어 읽기를 시작하지 않았습니다.`);
+    setMode("idle");
     return;
   }
   stopReading();
