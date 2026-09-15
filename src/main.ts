@@ -1260,6 +1260,9 @@ function explainGeminiError(message: string) {
   if (lower.includes("empty response") || lower.includes("응답이 비어")) {
     return "Gemini가 빈 응답을 보냈습니다. 다시 시도하거나 모델을 바꿔 테스트해주세요.";
   }
+  if (message.includes("번역 결과") || message.includes("번역 항목")) {
+    return message;
+  }
   if (lower.includes("model") || lower.includes("not found")) {
     return "연결 실패. 선택한 모델을 사용할 수 없습니다. 모델을 gemini-3.8-flash로 바꿔 다시 테스트해주세요.";
   }
@@ -1632,6 +1635,7 @@ async function selectReadingLanguage(code: LanguageCode) {
 
     translatedText = refineClassroomTranslation(sourceText, result, code);
     if (!translatedText) throw new Error("empty translation");
+    assertDisplayableTranslation(sourceText, translatedText, code);
     if (useGeminiTranslation && !settings.geminiVerified) {
       settings.geminiVerified = true;
       saveSettings();
@@ -2026,6 +2030,18 @@ function isAcceptableTranslationResult(sourceItems: string[], translatedItems: s
   });
 }
 
+function assertDisplayableTranslation(sourceText: string, translated: string, code: LanguageCode) {
+  const sourceItems = getNumberedTranslationItems(sourceText);
+  const translatedItems = getNumberedTranslationItems(translated);
+  const items = translatedItems.length ? translatedItems : normalizeTranslatedLineBreaks(translated).split("\n").filter(Boolean);
+  if (items.some((item) => hasTranslationMetaLeakage(item) || hasWrongLanguageLeakage(item, code) || !hasExpectedTargetScript(item, code))) {
+    throw new Error(`${languageLabel(code)} 번역 결과에 다른 언어 또는 해설 문구가 섞여 다시 확인이 필요합니다.`);
+  }
+  if (sourceItems.length > 1 && items.length !== sourceItems.length) {
+    throw new Error(`${languageLabel(code)} 번역 항목 수가 원문과 맞지 않습니다.`);
+  }
+}
+
 function hasTranslationMetaLeakage(text: string) {
   return /\b(?:let'?s\s+refine|here(?:'s| is)|translation|translate|translated|korean|english|natural\s+classroom\s+rule|classroom\s+rule|meaning|refined|final\s+answer)\b|번역\s*:|해석\s*:/i.test(text);
 }
@@ -2041,6 +2057,33 @@ function hasWrongLanguageLeakage(text: string, code: LanguageCode) {
     return true;
   }
   return false;
+}
+
+function hasExpectedTargetScript(text: string, code: LanguageCode) {
+  const body = stripNoticeNumber(cleanTranslationMetaText(text));
+  const letters = body.match(/\p{L}/gu) ?? [];
+  if (!letters.length) return false;
+  const count = (pattern: RegExp) => (body.match(pattern) ?? []).length;
+  const ratio = (pattern: RegExp) => count(pattern) / Math.max(letters.length, 1);
+  switch (code) {
+    case "zh":
+      return ratio(/[\p{Script=Han}]/gu) >= 0.35;
+    case "ru":
+    case "mn":
+      return ratio(/[\p{Script=Cyrillic}]/gu) >= 0.35;
+    case "km":
+      return ratio(/[\p{Script=Khmer}]/gu) >= 0.35;
+    case "th":
+      return ratio(/[\p{Script=Thai}]/gu) >= 0.35;
+    case "ne":
+      return ratio(/[\p{Script=Devanagari}]/gu) >= 0.35;
+    case "my":
+      return ratio(/[\p{Script=Myanmar}]/gu) >= 0.35;
+    case "ja":
+      return ratio(/[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/gu) >= 0.35;
+    default:
+      return true;
+  }
 }
 
 function hasSharedAgreementMeaning(text: string) {
